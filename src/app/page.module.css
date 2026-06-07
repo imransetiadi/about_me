@@ -212,6 +212,35 @@
   border-radius: 2px;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--transition-bezier),
+              transform 0.8s var(--transition-bezier);
+  will-change: opacity, transform;
+}
+
+.revealActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Hero Section */
 .hero {
   padding-top: 180px;
@@ -238,6 +267,26 @@
   gap: 24px;
   max-width: 680px;
   margin: 0 auto;
+}
+
+.heroLeft > *:nth-child(2) {
+  animation: slideUp 0.8s var(--transition-bezier) 0.15s both;
+}
+
+.heroLeft > *:nth-child(3) {
+  animation: slideUp 0.8s var(--transition-bezier) 0.25s both;
+}
+
+.heroLeft > *:nth-child(4) {
+  animation: slideUp 0.8s var(--transition-bezier) 0.35s both;
+}
+
+.heroLeft > *:nth-child(5) {
+  animation: slideUp 0.8s var(--transition-bezier) 0.45s both;
+}
+
+.heroLeft > *:nth-child(6) {
+  animation: slideUp 0.8s var(--transition-bezier) 0.55s both;
 }
 
 .welcomeTag {
@@ -371,6 +420,23 @@
   margin-bottom: 48px;
 }
 
+.timelineItem.reveal {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s var(--transition-bezier),
+              transform 0.8s var(--transition-bezier);
+}
+
+.timelineItem.revealActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timelineItem:nth-child(1) { transition-delay: 0.1s; }
+.timelineItem:nth-child(2) { transition-delay: 0.2s; }
+.timelineItem:nth-child(3) { transition-delay: 0.3s; }
+.timelineItem:nth-child(4) { transition-delay: 0.4s; }
+
 .timelineItem:last-child {
   margin-bottom: 0;
 }
@@ -499,6 +565,17 @@
 .skillCard {
   padding: 24px;
   border-radius: 12px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(0, 255, 213, 0.3);
+  background: var(--bg-glass-hover);
+  box-shadow: var(--shadow-glass), 0 0 20px rgba(0, 255, 213, 0.1);
 }
 
 .skillInfo {
@@ -547,6 +624,10 @@
   flex-direction: column;
   height: 100%;
 }
+
+.projectCard:nth-child(1) { transition-delay: 0.1s; }
+.projectCard:nth-child(2) { transition-delay: 0.2s; }
+.projectCard:nth-child(3) { transition-delay: 0.3s; }
 
 .projectVisual {
   height: 140px;
@@ -669,6 +750,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  transition-delay: 0.1s;
 }
 
 .contactMethod {
@@ -735,6 +817,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  transition-delay: 0.25s;
 }
 
 .inputGroup {
@@ -1003,7 +1086,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
-  animation: float 6s infinite ease-in-out, pulse-glow 4s infinite ease-in-out;
+  animation: float 6s infinite ease-in-out, pulse-glow 4s infinite ease-in-out, fadeIn 1s var(--transition-bezier) both;
 }
 
 .profileAvatar {
