@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Imran Setiadi — Cloud Engineer",
-  description: "Online curriculum vitae of Imran Setiadi, Cloud Engineer. Specializing in cloud infrastructure, Kubernetes/OpenShift, and Linux systems.",
+  title: "Imran Setiadi | Cloud Engineer",
+  description: "Responsive portfolio for Imran Setiadi, a cloud engineer focused on OpenStack, OpenShift, Kubernetes, and Linux infrastructure.",
 };
 
 export default function RootLayout({
@@ -23,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -36,17 +25,12 @@ export default function RootLayout({
                 } catch (e) {
                   document.documentElement.setAttribute('data-theme', 'dark');
                 }
-              })();
+      })();
             `,
           }}
         />
       </head>
-      <body>
-        <div className="bg-blob blob-primary"></div>
-        <div className="bg-blob blob-secondary"></div>
-        <div className="grid-bg"></div>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

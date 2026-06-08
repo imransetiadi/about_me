@@ -246,8 +246,8 @@ export default function Skills() {
   return (
     <div className="container">
       <div className={`${styles.sectionHeader} ${styles.reveal}`}>
-        <h2 className={styles.title}>Technical Skills</h2>
-        <div className={styles.titleUnderline}></div>
+        <span className={styles.eyebrow}>Skills</span>
+        <h2>Technical stack I work with</h2>
       </div>
 
       {/* Tab controls */}
@@ -276,20 +276,14 @@ export default function Skills() {
       <div className={styles.skillsGrid}>
         {skillData[activeSkillTab].map((skill, index) => (
           <div
-            key={skill.name + activeSkillTab} // Force recreate DOM element on tab change for animations
+            key={skill.name + activeSkillTab}
             className={`${styles.skillCard} ${styles.reveal} glass-panel`}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-              padding: "16px 24px",
-              transitionDelay: `${index * 50}ms`
-            }}
+            style={{ transitionDelay: `${index * 50}ms` }}
           >
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <div className={styles.skillIcon}>
               <SkillIcon name={skill.name} />
             </div>
-            <span className={styles.skillName} style={{ fontSize: "16px", fontWeight: "600" }}>{skill.name}</span>
+            <span className={styles.skillName}>{skill.name}</span>
           </div>
         ))}
       </div>

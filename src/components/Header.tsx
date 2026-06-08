@@ -5,13 +5,22 @@ import styles from "../app/page.module.css";
 
 const sectionKeys = ["home", "about", "experience", "skills", "education", "certifications", "contact"] as const;
 
+const sectionLabels: Record<typeof sectionKeys[number], string> = {
+  home: "Home",
+  about: "About",
+  experience: "Experience",
+  skills: "Skills",
+  education: "Education",
+  certifications: "Certs",
+  contact: "Contact",
+};
+
 export default function Header() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  // Synchronize theme with attribute and state on mount
   useEffect(() => {
     try {
       const currentTheme = document.documentElement.getAttribute("data-theme") as "dark" | "light";
@@ -32,7 +41,6 @@ export default function Header() {
     localStorage.setItem("theme", nextTheme);
   };
 
-  // Scroll event tracker
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -46,7 +54,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // IntersectionObserver for tracking active section
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -86,15 +93,13 @@ export default function Header() {
 
   return (
     <>
-      {/* Sticky Header Nav */}
       <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
         <div className={`container ${styles.navContainer}`}>
-          <div className={styles.logo} onClick={() => handleNavClick("home")}>
-            &lt;IS/&gt; <span className={styles.logoDot}></span>
-          </div>
+          <button className={styles.logo} onClick={() => handleNavClick("home")} aria-label="Go to home section">
+            IS<span></span>
+          </button>
 
-          {/* Desktop Navigation */}
-          <nav>
+          <nav aria-label="Main navigation">
             <ul className={styles.navLinks}>
               {sectionKeys.map((key) => (
                 <li
@@ -108,7 +113,7 @@ export default function Header() {
                       handleNavClick(key);
                     }}
                   >
-                    {key === "certifications" ? "Certs" : key.charAt(0).toUpperCase() + key.slice(1)}
+                    {sectionLabels[key]}
                   </a>
                 </li>
               ))}
@@ -116,7 +121,6 @@ export default function Header() {
           </nav>
 
           <div className={styles.actions}>
-            {/* Theme Toggle Button */}
             <button className={styles.themeToggle} onClick={toggleTheme} aria-label="Toggle theme">
               {theme === "dark" ? (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -137,7 +141,6 @@ export default function Header() {
               )}
             </button>
 
-            {/* Mobile Menu Toggle Button */}
             <button
               className={styles.menuBtn}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -160,9 +163,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
       <div className={`${styles.mobileDrawer} ${mobileMenuOpen ? styles.mobileDrawerActive : ""}`}>
-        <ul className={styles.navLinks} style={{ display: "flex" }}>
+        <ul className={styles.mobileNavLinks}>
           {sectionKeys.map((key) => (
             <li
               key={key}
@@ -175,7 +177,7 @@ export default function Header() {
                   handleNavClick(key);
                 }}
               >
-                {key === "certifications" ? "Certs" : key.charAt(0).toUpperCase() + key.slice(1)}
+                {sectionLabels[key]}
               </a>
             </li>
           ))}

@@ -26,7 +26,7 @@ export default function ContactForm() {
     <form className={`${styles.contactForm} ${styles.reveal} glass-panel`} onSubmit={handleContactSubmit}>
       {formSubmitted && (
         <div className={styles.formSuccess}>
-          Thank you! Your message has been sent successfully.
+          Message drafted. Please follow up by email or WhatsApp for production inquiries.
         </div>
       )}
 
@@ -38,7 +38,7 @@ export default function ContactForm() {
           className={styles.inputControl}
           value={formName}
           onChange={(e) => setFormName(e.target.value)}
-          placeholder="Enter your name"
+          placeholder="Your name"
           required
         />
       </div>
@@ -51,26 +51,26 @@ export default function ContactForm() {
           className={styles.inputControl}
           value={formEmail}
           onChange={(e) => setFormEmail(e.target.value)}
-          placeholder="Enter your email"
+          placeholder="your@email.com"
           required
         />
       </div>
 
       <div className={styles.inputGroup}>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">Project or issue</label>
         <textarea
           id="message"
           rows={5}
           className={styles.inputControl}
           value={formMessage}
           onChange={(e) => setFormMessage(e.target.value)}
-          placeholder="Describe your inquiry..."
+          placeholder="Tell me about the platform, scope, and timeline."
           required
         ></textarea>
       </div>
 
-      <button type="submit" className="btn btn-primary" style={{ width: "100%" }}>
-        Send Message
+      <button type="submit" className="btn btn-primary">
+        Send inquiry
       </button>
     </form>
   );
