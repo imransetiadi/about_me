@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: "Imran Setiadi | Cloud Engineer",
     template: "%s | Imran Setiadi",
   },
-  description: "Cloud Engineer focused on resilient infrastructure, OpenStack, OpenShift, Kubernetes, Linux, automation, and observability.",
+  description: "Cloud Engineer focused on resilient infrastructure, OpenStack, OpenShift, Kubernetes, Linux systems, automation, and observability.",
   keywords: [
     "Imran Setiadi",
     "Cloud Engineer",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Imran Setiadi | Cloud Engineer",
-    description: "Cloud Engineer focused on resilient infrastructure, Linux, Kubernetes, OpenShift, and OpenStack.",
+    description: "Cloud Engineer focused on resilient infrastructure, Linux systems, Kubernetes, OpenShift, and OpenStack.",
     images: ["/profile.jpg"],
   },
 };

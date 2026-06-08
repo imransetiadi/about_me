@@ -5,7 +5,7 @@ import Skills from "../components/Skills";
 import styles from "./page.module.css";
 
 const aboutStats = [
-  { value: "4+", label: "Years Experience" },
+  { value: "4+", label: "Years of Experience" },
   { value: "3", label: "Cloud Platforms" },
   { value: "10+", label: "Technical Skills" },
 ];
@@ -14,29 +14,29 @@ const experiences = [
   {
     role: "Cloud & DevOps Engineer",
     company: "PT. Inovasi Informatika Indonesia (i3)",
-    period: "3 Years 10 Months",
-    text: "Managed enterprise-scale cloud infrastructure, performed cluster performance improvements, cluster upgrades, and ensured stability and security of all cloud services.",
-    tags: ["OpenStack", "OpenShift", "Linux", "Container"],
+    period: "3 years, 10 months",
+    text: "Managed enterprise-scale cloud infrastructure, improved cluster performance, performed cluster upgrades, and helped maintain the stability and security of cloud services.",
+    tags: ["OpenStack", "OpenShift", "Linux", "Containers"],
   },
   {
-    role: "Cyber Security Trainee",
+    role: "Cybersecurity Trainee",
     company: "Digitalent Talent Scholarship",
-    period: "1 Month",
-    text: "Intensive cybersecurity training covering penetration testing techniques, network security, and infrastructure security best practices.",
-    tags: ["Cyber Security", "Network Security"],
+    period: "1 month",
+    text: "Completed intensive cybersecurity training covering penetration testing techniques, network security, and infrastructure security best practices.",
+    tags: ["Cybersecurity", "Network Security"],
   },
   {
     role: "Electrical Automation Engineer",
     company: "PT. Logamindo Pratama",
-    period: "3 Months",
-    text: "Handled electrical automation systems and maintained industrial automation devices.",
+    period: "3 months",
+    text: "Supported electrical automation systems and maintained industrial automation devices in an operational environment.",
     tags: ["Automation", "Electrical"],
   },
   {
     role: "ICT Staff (Intern)",
     company: "AirAsia",
-    period: "3 Months",
-    text: "Supported ICT operations including network management and enterprise IT systems.",
+    period: "3 months",
+    text: "Supported ICT operations, including network management and enterprise IT systems.",
     tags: ["ICT", "Networking"],
   },
 ];
@@ -105,7 +105,7 @@ export default function Home() {
               <span className={styles.eyebrow}>Hello, World_</span>
               <h1>Imran Setiadi</h1>
               <h2 className={styles.heroRole}>Cloud Engineer</h2>
-              <p className={styles.heroSubtitle}>Building & maintaining resilient cloud infrastructure with focus on stability, security, and high performance.</p>
+              <p className={styles.heroSubtitle}>Building and maintaining resilient cloud infrastructure with a focus on stability, security, and high performance.</p>
               <div className={styles.heroActions}>
                 <a href="#contact" className="btn btn-primary">Get in Touch</a>
                 <a href="#experience" className="btn btn-secondary">View Experience</a>
@@ -117,8 +117,8 @@ export default function Home() {
                 <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer">Credly</a>
               </div>
               <div className={styles.heroFocus} aria-label="Current technical focus">
-                <span>Current focus</span>
-                <strong>Cloud operations, platform reliability, and observability</strong>
+                <span>Current Focus</span>
+                <strong>Cloud operations, platform reliability, and observability.</strong>
               </div>
             </div>
 
@@ -142,10 +142,10 @@ export default function Home() {
             </div>
             <div className={`${styles.aboutText} ${styles.reveal}`}>
               <p>
-                Experienced Cloud Engineer with deep expertise in managing and optimizing enterprise-grade cloud infrastructure. Currently focused on managing cloud infrastructure at a provider company, ensuring all services run with high stability, security, and peak performance.
+                I am an experienced Cloud Engineer with deep expertise in managing and optimizing enterprise-grade cloud infrastructure. I currently focus on operating cloud infrastructure for a provider company, ensuring that services run with strong stability, security, and performance.
               </p>
               <p>
-                Proven track record in improving cluster performance, executing zero-downtime cluster upgrades, and implementing best practices for system security and reliability. Extensive hands-on experience with container orchestration technologies, multi-cloud platforms, and Linux system administration.
+                I have a proven track record of improving cluster performance, executing zero-downtime cluster upgrades, and implementing best practices for system security and reliability. I also have extensive hands-on experience with container orchestration technologies, multi-cloud platforms, and Linux system administration.
               </p>
               <div className={styles.aboutStats}>
                 {aboutStats.map((stat) => (
@@ -164,7 +164,7 @@ export default function Home() {
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
               <h2>Work Experience</h2>
-              <p>Operational roles across cloud platforms, security training, automation, and enterprise IT support.</p>
+              <p>Operational experience across cloud platforms, security training, automation, and enterprise IT support.</p>
             </div>
 
             <div className={styles.timeline}>
@@ -200,7 +200,7 @@ export default function Home() {
               <h3>Bachelor of Informatics Engineering (S1)</h3>
               <span>University of Lampung</span>
               <p>
-                Informatics Engineering program with a focus on system development and computer networking.
+                Completed an Informatics Engineering program with a focus on system development and computer networking.
               </p>
             </div>
           </div>
