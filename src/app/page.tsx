@@ -1,46 +1,43 @@
 import Image from "next/image";
-import ContactForm from "../components/ContactForm";
 import Header from "../components/Header";
 import ScrollReveal from "../components/ScrollReveal";
 import Skills from "../components/Skills";
 import styles from "./page.module.css";
 
-const services = [
-  {
-    title: "Cloud Operations",
-    text: "OpenStack, OpenShift, Kubernetes, and Linux platforms maintained with clean runbooks, measurable reliability, and controlled change windows.",
-  },
-  {
-    title: "Platform Hardening",
-    text: "Security baselines, access review, patch planning, and troubleshooting practices that reduce operational risk before it becomes downtime.",
-  },
-  {
-    title: "Migration Support",
-    text: "Hands-on help for cluster upgrades, service moves, and infrastructure improvements where continuity matters as much as speed.",
-  },
+const aboutStats = [
+  { value: "4+", label: "Years Experience" },
+  { value: "3", label: "Cloud Platforms" },
+  { value: "10+", label: "Technical Skills" },
 ];
 
 const experiences = [
   {
     role: "Cloud & DevOps Engineer",
     company: "PT. Inovasi Informatika Indonesia (i3)",
-    period: "3 years 10 months",
-    text: "Managed enterprise cloud services, improved cluster performance, completed platform upgrades, and handled stability, security, and observability work.",
-    tags: ["OpenStack", "OpenShift", "Kubernetes", "Linux"],
+    period: "3 Years 10 Months",
+    text: "Managed enterprise-scale cloud infrastructure, performed cluster performance improvements, cluster upgrades, and ensured stability and security of all cloud services.",
+    tags: ["OpenStack", "OpenShift", "Linux", "Container"],
   },
   {
     role: "Cyber Security Trainee",
     company: "Digitalent Talent Scholarship",
-    period: "1 month",
-    text: "Completed focused cybersecurity training across network security, penetration testing fundamentals, and infrastructure hardening.",
-    tags: ["Security", "Networking", "Hardening"],
+    period: "1 Month",
+    text: "Intensive cybersecurity training covering penetration testing techniques, network security, and infrastructure security best practices.",
+    tags: ["Cyber Security", "Network Security"],
   },
   {
     role: "Electrical Automation Engineer",
     company: "PT. Logamindo Pratama",
-    period: "3 months",
-    text: "Supported industrial automation systems and developed a practical foundation in operational discipline and field troubleshooting.",
-    tags: ["Automation", "Electrical", "Operations"],
+    period: "3 Months",
+    text: "Handled electrical automation systems and maintained industrial automation devices.",
+    tags: ["Automation", "Electrical"],
+  },
+  {
+    role: "ICT Staff (Intern)",
+    company: "AirAsia",
+    period: "3 Months",
+    text: "Supported ICT operations including network management and enterprise IT systems.",
+    tags: ["ICT", "Networking"],
   },
 ];
 
@@ -53,7 +50,7 @@ const certifications = [
     alt: "Red Hat Certified System Administrator badge",
   },
   {
-    title: "RHCSA in OpenShift",
+    title: "Red Hat Certified System Administrator in OpenShift",
     code: "EX280",
     issuer: "Red Hat",
     image: "/rhcsa-openshift.png",
@@ -68,6 +65,34 @@ const certifications = [
   },
 ];
 
+const contacts = [
+  { title: "Email", value: "imransetiadi22@gmail.com", href: "mailto:imransetiadi22@gmail.com", icon: "mail" },
+  { title: "Phone", value: "+62 821 1028 6777", href: "tel:+6282110286777", icon: "phone" },
+  { title: "Location", value: "Jakarta, Indonesia", icon: "location" },
+  { title: "LinkedIn", value: "imransetiadi", href: "https://www.linkedin.com/in/imransetiadi/", icon: "linkedin" },
+  { title: "GitHub", value: "imransetiadi", href: "https://github.com/imransetiadi", icon: "github" },
+  { title: "Instagram", value: "@imran_setiadi", href: "https://www.instagram.com/imran_setiadi/", icon: "instagram" },
+];
+
+function ContactIcon({ type }: { type: string }) {
+  if (type === "mail") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>;
+  }
+  if (type === "phone") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>;
+  }
+  if (type === "location") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>;
+  }
+  if (type === "linkedin") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>;
+  }
+  if (type === "github") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m16 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 22 4.8 5 5 0 0 0 21.9 1S20.7.6 18 2.5a13.4 13.4 0 0 0-7 0C8.3.6 7.1 1 7.1 1A5 5 0 0 0 7 4.8a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>;
+  }
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg>;
+}
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -77,11 +102,19 @@ export default function Home() {
         <section id="home" className={styles.hero}>
           <div className={`container ${styles.heroGrid}`}>
             <div className={styles.heroCopy}>
-              <span className={styles.eyebrow}>Cloud Engineer based in Jakarta</span>
+              <span className={styles.eyebrow}>Hello, World_</span>
               <h1>Imran Setiadi</h1>
+              <h2 className={styles.heroRole}>Cloud Engineer</h2>
+              <p className={styles.heroSubtitle}>Building & maintaining resilient cloud infrastructure with focus on stability, security, and high performance.</p>
               <div className={styles.heroActions}>
-                <a href="#contact" className="btn btn-primary">Start a conversation</a>
-                <a href="#experience" className="btn btn-secondary">View experience</a>
+                <a href="#contact" className="btn btn-primary">Get in Touch</a>
+                <a href="#experience" className="btn btn-secondary">View Experience</a>
+              </div>
+              <div className={styles.heroSocials}>
+                <a href="https://www.linkedin.com/in/imransetiadi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/imransetiadi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com/imran_setiadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer">Credly</a>
               </div>
             </div>
 
@@ -102,7 +135,6 @@ export default function Home() {
           <div className={`container ${styles.aboutGrid}`}>
             <div className={`${styles.sectionIntro} ${styles.reveal}`}>
               <span className={styles.eyebrow}>About</span>
-              <h2>About Me</h2>
             </div>
             <div className={`${styles.aboutText} ${styles.reveal}`}>
               <p>
@@ -111,23 +143,14 @@ export default function Home() {
               <p>
                 Proven track record in improving cluster performance, executing zero-downtime cluster upgrades, and implementing best practices for system security and reliability. Extensive hands-on experience with container orchestration technologies, multi-cloud platforms, and Linux system administration.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.servicesSection}`}>
-          <div className="container">
-            <div className={`${styles.sectionHeader} ${styles.reveal}`}>
-              <span className={styles.eyebrow}>Focus Areas</span>
-              <h2>What I can help with</h2>
-            </div>
-            <div className={styles.cardGrid}>
-              {services.map((service) => (
-                <article key={service.title} className={`${styles.featureCard} ${styles.reveal}`}>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                </article>
-              ))}
+              <div className={styles.aboutStats}>
+                {aboutStats.map((stat) => (
+                  <div key={stat.label} className={styles.statCard}>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -136,7 +159,7 @@ export default function Home() {
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
-              <h2>Hands-on infrastructure background</h2>
+              <h2>Work Experience</h2>
             </div>
 
             <div className={styles.timeline}>
@@ -165,12 +188,14 @@ export default function Home() {
           <div className={`container ${styles.educationGrid}`}>
             <div className={`${styles.sectionIntro} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Education</span>
-              <h2>Bachelor of Informatics Engineering</h2>
+              <h2>Education</h2>
             </div>
             <div className={`${styles.educationCard} ${styles.reveal}`}>
+              <Image src="/unila-logo.png" alt="Universitas Lampung logo" width={96} height={96} className={styles.educationLogo} />
+              <h3>Bachelor of Informatics Engineering (S1)</h3>
               <span>University of Lampung</span>
               <p>
-                Informatics Engineering program with a foundation in software systems, computer networking, and infrastructure concepts.
+                Informatics Engineering program with a focus on system development and computer networking.
               </p>
             </div>
           </div>
@@ -180,7 +205,7 @@ export default function Home() {
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Credentials</span>
-              <h2>Verified technical certifications</h2>
+              <h2>Certifications</h2>
             </div>
 
             <div className={styles.certGrid}>
@@ -198,35 +223,39 @@ export default function Home() {
 
             <div className={styles.centerAction}>
               <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                View Credly profile
+                View All Certifications on Credly
               </a>
             </div>
           </div>
         </section>
 
         <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
-          <div className={`container ${styles.contactGrid}`}>
-            <div className={`${styles.contactInfo} ${styles.reveal}`}>
+          <div className="container">
+            <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Contact</span>
-              <h2>Need reliable infrastructure help?</h2>
-              <p>
-                Send a short message about the platform, current problem, and expected timeline. I am available for cloud operations, migration support, and troubleshooting discussions.
-              </p>
-
-              <div className={styles.contactList}>
-                <a href="mailto:imransetiadi22@gmail.com">imransetiadi22@gmail.com</a>
-                <a href="tel:+6282110286777">+62 821 1028 6777</a>
-                <span>Jakarta, Indonesia</span>
-              </div>
-
-              <div className={styles.socials}>
-                <a href="https://github.com/imransetiadi" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/imransetiadi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://www.instagram.com/imran_setiadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
-              </div>
+              <h2>Get in Touch</h2>
             </div>
+            <div className={styles.contactCards}>
+              {contacts.map((contact) => {
+                const content = (
+                  <>
+                    <span className={styles.contactIcon}><ContactIcon type={contact.icon} /></span>
+                    <h3>{contact.title}</h3>
+                    <p>{contact.value}</p>
+                  </>
+                );
 
-            <ContactForm />
+                return contact.href ? (
+                  <a key={contact.title} href={contact.href} target={contact.href.startsWith("http") ? "_blank" : undefined} rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined} className={`${styles.contactCard} ${styles.reveal}`}>
+                    {content}
+                  </a>
+                ) : (
+                  <div key={contact.title} className={`${styles.contactCard} ${styles.reveal}`}>
+                    {content}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
       </main>
@@ -234,7 +263,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className="container">
           <strong>Imran Setiadi</strong>
-          <span>Cloud Engineer | 2026</span>
+          <span>2026</span>
         </div>
       </footer>
 
