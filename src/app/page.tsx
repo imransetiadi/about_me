@@ -116,6 +116,10 @@ export default function Home() {
                 <a href="https://www.instagram.com/imran_setiadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer">Credly</a>
               </div>
+              <div className={styles.heroFocus} aria-label="Current technical focus">
+                <span>Current focus</span>
+                <strong>Cloud operations, platform reliability, and observability</strong>
+              </div>
             </div>
 
             <div className={styles.heroPanel} aria-label="Profile overview">
@@ -160,6 +164,7 @@ export default function Home() {
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
               <h2>Work Experience</h2>
+              <p>Operational roles across cloud platforms, security training, automation, and enterprise IT support.</p>
             </div>
 
             <div className={styles.timeline}>
@@ -263,7 +268,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className="container">
           <strong>Imran Setiadi</strong>
-          <span>2026</span>
+          <span>Cloud Engineer | Jakarta, Indonesia | 2026</span>
         </div>
       </footer>
 

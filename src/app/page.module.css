@@ -228,6 +228,32 @@
   transform: translateY(-2px);
 }
 
+.heroFocus {
+  display: grid;
+  gap: 4px;
+  width: min(100%, 520px);
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  box-shadow: var(--shadow-card);
+}
+
+.heroFocus span {
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heroFocus strong {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 620;
+}
+
 .heroPanel {
   position: relative;
   width: min(100%, 340px);
@@ -299,6 +325,12 @@
   font-size: clamp(26px, 3.5vw, 38px);
   font-weight: 660;
   overflow-wrap: anywhere;
+}
+
+.sectionHeader p {
+  max-width: 620px;
+  margin: 12px auto 0;
+  text-align: center;
 }
 
 .aboutGrid,
@@ -835,6 +867,10 @@
     justify-items: center;
   }
 
+  .heroFocus {
+    text-align: center;
+  }
+
   .heroPanel {
     width: min(100%, 320px);
   }
@@ -891,6 +927,7 @@
 
   .heroCopy p {
     font-size: 15px;
+    text-align: center;
   }
 
   .heroActions,
