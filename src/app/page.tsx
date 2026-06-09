@@ -4,12 +4,6 @@ import ScrollReveal from "../components/ScrollReveal";
 import Skills from "../components/Skills";
 import styles from "./page.module.css";
 
-const aboutStats = [
-  { value: "4+", label: "Years of Experience" },
-  { value: "3", label: "Cloud Platforms" },
-  { value: "10+", label: "Technical Skills" },
-];
-
 const experiences = [
   {
     role: "Cloud & DevOps Engineer",
@@ -143,14 +137,6 @@ export default function Home() {
               <p>
                 I have a proven track record of improving cluster performance, executing zero-downtime cluster upgrades, and implementing best practices for system security and reliability. I also have extensive hands-on experience with container orchestration technologies, multi-cloud platforms, and Linux system administration.
               </p>
-              <div className={styles.aboutStats}>
-                {aboutStats.map((stat) => (
-                  <div key={stat.label} className={styles.statCard}>
-                    <strong>{stat.value}</strong>
-                    <span>{stat.label}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -261,8 +247,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className="container">
-          <strong>Imran Setiadi</strong>
-          <span>Cloud Engineer | Jakarta, Indonesia | 2026</span>
+          <span>Imran Setiadi. © 2026. All rights reserved.</span>
         </div>
       </footer>
 
