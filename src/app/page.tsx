@@ -116,10 +116,6 @@ export default function Home() {
                 <a href="https://www.instagram.com/imran_setiadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer">Credly</a>
               </div>
-              <div className={styles.heroFocus} aria-label="Current technical focus">
-                <span>Current Focus</span>
-                <strong>Cloud operations, platform reliability, and observability.</strong>
-              </div>
             </div>
 
             <div className={styles.heroPanel} aria-label="Profile overview">
