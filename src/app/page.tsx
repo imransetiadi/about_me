@@ -163,8 +163,6 @@ export default function Home() {
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
-              <h2>Work Experience</h2>
-              <p>Operational experience across cloud platforms, security training, automation, and enterprise IT support.</p>
             </div>
 
             <div className={styles.timeline}>
@@ -196,8 +194,8 @@ export default function Home() {
               <h2>Education</h2>
             </div>
             <div className={`${styles.educationCard} ${styles.reveal}`}>
-              <Image src="/unila-logo.png" alt="Universitas Lampung logo" width={96} height={96} className={styles.educationLogo} />
-              <h3>Bachelor of Informatics Engineering (S1)</h3>
+              <Image src="/unila-logo.png" alt="Universitas Lampung logo" width={64} height={64} className={styles.educationLogo} />
+              <h3>Bachelor of Informatics Engineering</h3>
               <span>University of Lampung</span>
               <p>
                 Completed an Informatics Engineering program with a focus on system development and computer networking.
