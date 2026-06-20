@@ -96,7 +96,19 @@ export default function Header() {
       <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
         <div className={`container ${styles.navContainer}`}>
           <button className={styles.logo} onClick={() => handleNavClick("home")} aria-label="Go to home section">
-            IS<span></span>
+            <span className={styles.logoIcon}>
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="var(--color-accent)" />
+                    <stop offset="100%" stopColor="var(--color-red)" />
+                  </linearGradient>
+                </defs>
+                <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+                <text x="16" y="22" textAnchor="middle" fontWeight="800" fontSize="17" fontFamily="inherit" fill="#fff" letterSpacing="-0.5">IS</text>
+              </svg>
+            </span>
+            <span className={styles.logoText}>imboyy<span className={styles.logoDot}>.</span></span>
           </button>
 
           <nav aria-label="Main navigation">
