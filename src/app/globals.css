@@ -1,33 +1,35 @@
 :root {
-  --bg-primary: #f5f0e8;
+  --bg-primary: #fffdf8;
   --bg-secondary: #ffffff;
-  --bg-muted: #ede8dd;
+  --bg-muted: #faf6ef;
   --bg-panel: #ffffff;
-  --border: #1a1a1a;
+  --border: #2b2b2b;
   --border-width: 2.5px;
-  --text-primary: #1a1a1a;
-  --text-secondary: #3d3d3d;
-  --text-muted: #6b6b6b;
-  --color-primary: #5eead4;
-  --color-secondary: #fbbf24;
-  --color-accent: #0f766e;
-  --color-red: #ff6b6b;
-  --color-soft: #d9f9f3;
-  --color-accent-soft: #d9f9f3;
-  --color-red-soft: #ffe0e0;
-  --color-yellow: #fbbf24;
-  --color-yellow-soft: #fef3c7;
-  --color-blue: #60a5fa;
-  --color-blue-soft: #dbeafe;
-  --color-purple: #c084fc;
-  --color-purple-soft: #f3e8ff;
-  --shadow-brutal: 4px 4px 0 #1a1a1a;
-  --shadow-brutal-lg: 6px 6px 0 #1a1a1a;
-  --shadow-brutal-sm: 3px 3px 0 #1a1a1a;
-  --shadow-brutal-hover: 6px 6px 0 #1a1a1a;
-  --shadow-card: 4px 4px 0 #1a1a1a;
-  --shadow-hover: 6px 6px 0 #1a1a1a;
-  --shadow-soft: 4px 4px 0 #1a1a1a;
+  --text-primary: #2b2b2b;
+  --text-secondary: #4a4a4a;
+  --text-muted: #7a7a7a;
+  --color-primary: #e8453c;
+  --color-primary-soft: #fde8e6;
+  --color-secondary: #f5c542;
+  --color-secondary-soft: #fef6dc;
+  --color-accent: #d93b33;
+  --color-red: #e8453c;
+  --color-red-soft: #fde8e6;
+  --color-yellow: #f5c542;
+  --color-yellow-soft: #fef6dc;
+  --color-soft: #fef6dc;
+  --color-accent-soft: #fde8e6;
+  --color-blue: #e8453c;
+  --color-blue-soft: #fde8e6;
+  --color-purple: #f5c542;
+  --color-purple-soft: #fef6dc;
+  --shadow-brutal: 4px 4px 0 #2b2b2b;
+  --shadow-brutal-lg: 6px 6px 0 #2b2b2b;
+  --shadow-brutal-sm: 3px 3px 0 #2b2b2b;
+  --shadow-brutal-hover: 6px 6px 0 #2b2b2b;
+  --shadow-card: 4px 4px 0 #2b2b2b;
+  --shadow-hover: 6px 6px 0 #2b2b2b;
+  --shadow-soft: 4px 4px 0 #2b2b2b;
   --radius: 14px;
   --font-sans: Inter, "SF Pro Text", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "SF Pro Display", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -35,27 +37,29 @@
 }
 
 [data-theme="dark"] {
-  --bg-primary: #1a1a2e;
-  --bg-secondary: #25253e;
-  --bg-muted: #2d2d4a;
-  --bg-panel: #25253e;
+  --bg-primary: #1c1917;
+  --bg-secondary: #272420;
+  --bg-muted: #302c27;
+  --bg-panel: #272420;
   --border: #f5f0e8;
   --text-primary: #f5f0e8;
-  --text-secondary: #d4d0c8;
-  --text-muted: #a09c94;
-  --color-primary: #5eead4;
+  --text-secondary: #d6d0c6;
+  --text-muted: #9e9890;
+  --color-primary: #f87171;
+  --color-primary-soft: #3d2222;
   --color-secondary: #fbbf24;
-  --color-accent: #5eead4;
-  --color-red: #ff6b6b;
-  --color-soft: #1e3a35;
-  --color-accent-soft: #1e3a35;
-  --color-red-soft: #3d2020;
+  --color-secondary-soft: #3a3018;
+  --color-accent: #f87171;
+  --color-red: #f87171;
+  --color-red-soft: #3d2222;
   --color-yellow: #fbbf24;
   --color-yellow-soft: #3a3018;
-  --color-blue: #60a5fa;
-  --color-blue-soft: #1e2a3d;
-  --color-purple: #c084fc;
-  --color-purple-soft: #2e1e3d;
+  --color-soft: #3a3018;
+  --color-accent-soft: #3d2222;
+  --color-blue: #f87171;
+  --color-blue-soft: #3d2222;
+  --color-purple: #fbbf24;
+  --color-purple-soft: #3a3018;
   --shadow-brutal: 4px 4px 0 #f5f0e8;
   --shadow-brutal-lg: 6px 6px 0 #f5f0e8;
   --shadow-brutal-sm: 3px 3px 0 #f5f0e8;
@@ -107,7 +111,7 @@ body::before {
   background-image:
     repeating-linear-gradient(0deg, var(--border) 0, var(--border) 1px, transparent 1px, transparent 64px),
     repeating-linear-gradient(90deg, var(--border) 0, var(--border) 1px, transparent 1px, transparent 64px);
-  opacity: 0.05;
+  opacity: 0.04;
   pointer-events: none;
 }
 
@@ -194,12 +198,20 @@ h3 {
 
 .btn-primary {
   background: var(--color-primary);
-  color: #1a1a1a;
+  color: #ffffff;
 }
 
 .btn-secondary {
-  background: var(--bg-secondary);
+  background: var(--color-yellow);
   color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-primary {
+  color: #1c1917;
+}
+
+[data-theme="dark"] .btn-secondary {
+  color: #1c1917;
 }
 
 .glass-panel {
@@ -210,7 +222,7 @@ h3 {
 
 ::selection {
   background: var(--color-yellow);
-  color: #1a1a1a;
+  color: #2b2b2b;
 }
 
 @media (max-width: 680px) {
