@@ -595,7 +595,7 @@
   padding: 5px 10px;
   border-radius: var(--radius);
   border: var(--border-width) solid var(--border);
-  background: var(--color-secondary-soft);
+  background: var(--bg-secondary);
   color: var(--text-primary);
   font-size: 12px;
   font-weight: 700;
@@ -610,16 +610,7 @@
   box-shadow: var(--shadow-brutal-sm);
 }
 
-.tags small:nth-child(2n),
-.certCard small {
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
-}
 
-:global([data-theme="dark"]) .tags small:nth-child(2n),
-:global([data-theme="dark"]) .certCard small {
-  color: var(--color-red);
-}
 
 /* ─── SKILLS ─── */
 .skillCategories {

@@ -97,12 +97,11 @@ export default function Header() {
         <div className={`container ${styles.navContainer}`}>
           <button className={styles.logo} onClick={() => handleNavClick("home")} aria-label="Go to home section">
             <span className={styles.logoIcon}>
-              <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect width="32" height="32" rx="10" fill="var(--color-red)" />
                 <text x="16" y="22" textAnchor="middle" fontWeight="800" fontSize="16" fontFamily="inherit" fill="#ffffff" letterSpacing="-0.5">IS</text>
               </svg>
             </span>
-            <span className={styles.logoText}>imboyy<span className={styles.logoDot}>.</span></span>
           </button>
 
           <nav aria-label="Main navigation">
