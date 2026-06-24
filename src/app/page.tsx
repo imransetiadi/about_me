@@ -176,7 +176,7 @@ export default function Home() {
               <h2>Education</h2>
             </div>
             <div className={`${styles.educationCard} ${styles.reveal}`}>
-              <Image src="/unila-logo.png" alt="Universitas Lampung logo" width={64} height={64} className={styles.educationLogo} />
+              <Image src="/imboy-logo.svg" alt="imboy logo" width={64} height={64} className={styles.educationLogo} />
               <h3>Bachelor of Informatics Engineering</h3>
               <span>University of Lampung</span>
               <p>
