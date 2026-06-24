@@ -99,7 +99,6 @@ export default function Home() {
         <FadeIn delay={0.1}><section id="home" className={styles.hero}>
           <div className={`container ${styles.heroGrid}`}>
             <div className={styles.heroCopy}>
-              <span className={styles.eyebrow}>Hello, World_</span>
               <h1>Imran Setiadi</h1>
               <h2 className={styles.heroRole}>Cloud Engineer</h2>
               <p className={styles.heroSubtitle}>Building and maintaining resilient cloud infrastructure with a focus on stability, security, and high performance.</p>
