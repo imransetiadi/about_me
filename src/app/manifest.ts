@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Imran Setiadi | Cloud Engineer',
-    short_name: 'imboy',
+    short_name: 'Imran S.',
     description: 'Portfolio of Imran Setiadi, a Cloud Engineer focused on resilient cloud infrastructure.',
     start_url: '/',
     display: 'standalone',

@@ -12,28 +12,28 @@ const experiences = [
     role: "Cloud & DevOps Engineer",
     company: "PT. Inovasi Informatika Indonesia (i3)",
     period: "3 years, 10 months - Now",
-    text: "Managed enterprise-scale cloud infrastructure, improved cluster performance, performed cluster upgrades, and helped maintain the stability and security of cloud services.",
+    text: "Design, deploy, and manage enterprise-grade cloud and container infrastructure. Successfully led zero-downtime upgrades for Red Hat OpenShift and OpenStack clusters, automated platform provisioning using Ansible and Bash, and optimized monitoring stack to maintain high availability and robust security compliance.",
     tags: ["OpenStack", "OpenShift", "Linux", "Containers"],
   },
   {
     role: "Cybersecurity Trainee",
     company: "Digitalent Talent Scholarship",
     period: "1 month",
-    text: "Completed intensive cybersecurity training covering penetration testing techniques, network security, and infrastructure security best practices.",
+    text: "Completed rigorous cybersecurity training with a focus on network security assessments, penetration testing methodologies, vulnerability identification, and infrastructure defense strategies.",
     tags: ["Cybersecurity", "Network Security"],
   },
   {
     role: "Electrical Automation Engineer",
     company: "PT. Logamindo Pratama",
     period: "3 months",
-    text: "Supported electrical automation systems and maintained industrial automation devices in an operational environment.",
+    text: "Maintained and optimized industrial electrical automation systems, managed PLC programming, and diagnosed hardware issues to maximize operational uptime and machinery efficiency.",
     tags: ["Automation", "Electrical"],
   },
   {
     role: "ICT Staff (Intern)",
     company: "AirAsia",
     period: "3 months",
-    text: "Supported ICT operations, including network management and enterprise IT systems.",
+    text: "Supported enterprise-level IT and network operations, assisted with active directory management, resolved network connectivity issues, and maintained high reliability across corporate ICT systems.",
     tags: ["ICT", "Networking"],
   },
 ];
@@ -101,7 +101,7 @@ export default function Home() {
             <div className={styles.heroCopy}>
               <h1>Imran Setiadi</h1>
               <h2 className={styles.heroRole}>Cloud Engineer</h2>
-              <p className={styles.heroSubtitle}>Building and maintaining resilient cloud infrastructure with a focus on stability, security, and high performance.</p>
+              <p className={styles.heroSubtitle}>Specializing in architecting resilient cloud-native infrastructure, optimizing enterprise container platforms, and driving automation to deliver secure, scalable, and highly available systems.</p>
               <div className={styles.heroActions}>
                 <a href="#contact" className="btn btn-primary">Get in Touch</a>
                 <a href="#experience" className="btn btn-secondary">View Experience</a>
@@ -134,10 +134,10 @@ export default function Home() {
             </div>
             <div className={`${styles.aboutText} ${styles.reveal}`}>
               <p>
-                I am an experienced Cloud Engineer with deep expertise in managing and optimizing enterprise-grade cloud infrastructure. I currently focus on operating cloud infrastructure for a provider company, ensuring that services run with strong stability, security, and performance.
+                I am a dedicated Cloud & DevOps Engineer specializing in architecting, securing, and optimizing enterprise-grade cloud and container infrastructure. My focus lies in building highly resilient systems, streamlining deployment workflows through automation, and maintaining rigorous security standards.
               </p>
               <p>
-                I have a proven track record of improving cluster performance, executing zero-downtime cluster upgrades, and implementing best practices for system security and reliability. I also have extensive hands-on experience with container orchestration technologies, multi-cloud platforms, and Linux system administration.
+                Throughout my career, I have successfully executed zero-downtime cluster upgrades, improved container performance, and automated infrastructure provisioning at scale. With deep technical proficiency in Red Hat OpenStack, OpenShift, Kubernetes, and Linux systems engineering, I bridge the gap between development and operations to drive reliability and efficiency.
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
               <h3>Bachelor of Informatics Engineering</h3>
               <span>University of Lampung</span>
               <p>
-                Completed an Informatics Engineering program with a focus on system development and computer networking.
+                Graduated with a curriculum focused on software engineering, distributed systems, database management, and advanced computer networking.
               </p>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function Home() {
             </div>
             <div className={styles.contactGrid}>
               <div className={styles.contactInfo}>
-                <p className={styles.reveal}>Feel free to reach out for collaborations, project inquiries, or just to say hello! I will get back to you as soon as possible.</p>
+                <p className={styles.reveal}>Please feel free to reach out to discuss professional collaborations, project consulting, or technical opportunities. I will respond to your inquiry as soon as possible.</p>
                 <div className={styles.contactCards}>
                   {contacts.map((contact) => {
                     const content = (
