@@ -126,8 +126,8 @@ export default function Header() {
           <button className={styles.logo} onClick={() => handleNavClick("home")} aria-label="Go to home section">
             <span className={styles.logoIcon}>
               <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="32" height="32" rx="10" fill="var(--color-red)" />
-                <text x="16" y="22" textAnchor="middle" fontWeight="800" fontSize="16" fontFamily="inherit" fill="#ffffff" letterSpacing="-0.5">IS</text>
+                <rect width="32" height="32" rx="6" fill="#2563EB" />
+                <text x="16" y="19" textAnchor="middle" dominantBaseline="middle" fontWeight="bold" fontSize="12" fontFamily="Arial, sans-serif" fill="#ffffff">im</text>
               </svg>
             </span>
           </button>
