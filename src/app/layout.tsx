@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Imran Setiadi" }],
   creator: "Imran Setiadi",
+  verification: {
+    google: "google-site-verification-placeholder",
+  },
   alternates: {
     canonical: "/",
   },
