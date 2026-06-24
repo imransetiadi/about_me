@@ -9,10 +9,19 @@ export default function ContactForm() {
   const [formMessage, setFormMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [botcheck, setBotcheck] = useState(false);
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formName || !formEmail || !formMessage) return;
+
+    if (botcheck) {
+      setSubmitStatus("success");
+      setFormName("");
+      setFormEmail("");
+      setFormMessage("");
+      return;
+    }
 
     setIsSubmitting(true);
     setSubmitStatus("idle");
@@ -59,6 +68,15 @@ export default function ContactForm() {
           Message sent successfully! I will get back to you shortly.
         </div>
       )}
+      <input
+        type="checkbox"
+        name="botcheck"
+        style={{ display: "none" }}
+        checked={botcheck}
+        onChange={(e) => setBotcheck(e.target.checked)}
+        tabIndex={-1}
+        autoComplete="off"
+      />
 
       {submitStatus === "error" && (
         <div className={styles.formError} style={{ background: "#fee2e2", color: "#991b1b", border: "2px solid #dc2626", padding: "12px", borderRadius: "8px", fontWeight: "bold", fontSize: "14px" }}>
