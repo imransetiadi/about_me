@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import ScrollReveal from "../components/ScrollReveal";
 import Skills from "../components/Skills";
 import styles from "./page.module.css";
-import { FadeIn } from "../components/FadeIn";
 
 const experiences = [
   {
@@ -142,7 +141,7 @@ export default function Home() {
           </div>
         </section>
 
-        <FadeIn delay={0.1}><section id="experience" className={styles.section}>
+        <section id="experience" className={styles.section}>
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
@@ -164,7 +163,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section></FadeIn>
+        </section>
 
         <section id="skills" className={`${styles.section} ${styles.skillsSection}`}>
           <Skills />
@@ -177,7 +176,7 @@ export default function Home() {
               <h2>Education</h2>
             </div>
             <div className={`${styles.educationCard} ${styles.reveal}`}>
-              <Image src="/unila-logo.png" alt="Universitas Lampung logo" priority width={64} height={64} className={styles.educationLogo} />
+              <Image src="/unila-logo.png" alt="Universitas Lampung logo" width={64} height={64} className={styles.educationLogo} />
               <h3>Bachelor of Informatics Engineering</h3>
               <span>University of Lampung</span>
               <p>
@@ -187,7 +186,7 @@ export default function Home() {
           </div>
         </section>
 
-        <FadeIn delay={0.2}><section id="certifications" className={styles.section}>
+        <section id="certifications" className={styles.section}>
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Credentials</span>
@@ -213,9 +212,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section></FadeIn>
+        </section>
 
-        <FadeIn delay={0.3}><section id="contact" className={`${styles.section} ${styles.contactSection}`}>
+        <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Contact</span>
@@ -243,7 +242,7 @@ export default function Home() {
               })}
             </div>
           </div>
-        </section></FadeIn>
+        </section>
       </main>
 
       <footer className={styles.footer}>

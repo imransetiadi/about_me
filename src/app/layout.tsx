@@ -1,25 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://imransetiadi.github.io"),
   title: {
-    default: "imboy | Cloud Engineer",
-    template: "%s | imboy",
+    default: "Imran Setiadi | Cloud Engineer",
+    template: "%s | Imran Setiadi",
   },
-  description: "Cloud Engineer focused on resilient infrastructure, OpenStack, Kubernetes, and automation. Explore my portfolio and projects.",
+  description: "Cloud Engineer focused on resilient infrastructure, OpenStack, OpenShift, Kubernetes, Linux systems, automation, and observability.",
   keywords: [
-    "imboy",
     "Imran Setiadi",
     "Cloud Engineer",
     "OpenStack",
+    "OpenShift",
     "Kubernetes",
     "Linux",
     "DevOps",
@@ -31,16 +24,16 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "imboy | Cloud Engineer",
-    description: "Portfolio of imboy, a Cloud Engineer focused on reliable, secure, and observable infrastructure.",
+    title: "Imran Setiadi | Cloud Engineer",
+    description: "Portfolio of Imran Setiadi, a Cloud Engineer focused on reliable, secure, and observable infrastructure.",
     url: "/",
-    siteName: "imboy",
+    siteName: "Imran Setiadi",
     images: [
       {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "imboy Portfolio",
+        url: "/profile.jpg",
+        width: 520,
+        height: 620,
+        alt: "Imran Setiadi",
       },
     ],
     locale: "en_US",
@@ -48,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "imboy | Cloud Engineer",
-    description: "Cloud Engineer focused on resilient infrastructure, Linux systems, Kubernetes, and OpenStack.",
-    images: ["/og-image.svg"],
+    title: "Imran Setiadi | Cloud Engineer",
+    description: "Cloud Engineer focused on resilient infrastructure, Linux systems, Kubernetes, OpenShift, and OpenStack.",
+    images: ["/profile.jpg"],
   },
 };
 
@@ -65,7 +58,7 @@ export default function RootLayout({
     name: "Imran Setiadi",
     jobTitle: "Cloud Engineer",
     url: "https://imransetiadi.github.io/",
-    image: "https://imransetiadi.github.io/og-image.svg",
+    image: "https://imransetiadi.github.io/profile.jpg",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jakarta",
@@ -81,7 +74,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.className} antialiased`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <script
@@ -90,8 +83,7 @@ export default function RootLayout({
               (function() {
                 try {
                   const savedTheme = localStorage.getItem('theme');
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                  const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
                   document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {
                   document.documentElement.setAttribute('data-theme', 'dark');
