@@ -257,7 +257,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className="container">
-          <span>Imran Setiadi. © 2026. All rights reserved.</span>
+          <span>Imran Setiadi. © {new Date().getFullYear()}. All rights reserved.</span>
         </div>
       </footer>
 
