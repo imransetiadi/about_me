@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Imran Setiadi",
     images: [
       {
-        url: "/profile.jpg",
-        width: 520,
-        height: 620,
-        alt: "Imran Setiadi",
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Imran Setiadi | Cloud Engineer",
       },
     ],
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Imran Setiadi | Cloud Engineer",
     description: "Cloud Engineer focused on resilient infrastructure, Linux systems, Kubernetes, OpenShift, and OpenStack.",
-    images: ["/profile.jpg"],
+    images: ["/og-image.svg"],
   },
 };
 
