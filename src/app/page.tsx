@@ -11,7 +11,7 @@ const experiences = [
   {
     role: "Cloud & DevOps Engineer",
     company: "PT. Inovasi Informatika Indonesia (i3)",
-    period: "3 years, 10 months",
+    period: "3 years, 10 months - Now",
     text: "Managed enterprise-scale cloud infrastructure, improved cluster performance, performed cluster upgrades, and helped maintain the stability and security of cloud services.",
     tags: ["OpenStack", "OpenShift", "Linux", "Containers"],
   },
