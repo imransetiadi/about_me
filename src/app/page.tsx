@@ -64,7 +64,7 @@ const certifications = [
 
 const contacts = [
   { title: "Email", value: "imransetiadi22@gmail.com", href: "mailto:imransetiadi22@gmail.com", icon: "mail" },
-  { title: "Phone", value: "+62 821 1028 6777", href: "tel:+6282110286777", icon: "phone" },
+  { title: "WhatsApp", value: "+62 821 1028 6777", href: "https://wa.me/6282110286777", icon: "phone" },
   { title: "Location", value: "Jakarta, Indonesia", icon: "location" },
   { title: "LinkedIn", value: "imransetiadi", href: "https://www.linkedin.com/in/imransetiadi/", icon: "linkedin" },
   { title: "GitHub", value: "imransetiadi", href: "https://github.com/imransetiadi", icon: "github" },
