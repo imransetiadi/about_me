@@ -253,3 +253,38 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --primary-color: #2563EB;
+  --secondary-color: #A78BFA;
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --primary-color: #3B82F6;
+  --secondary-color: #8B5CF6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button, a {
+  color: var(--primary-color);
+}
+
+:root {
+  --font-inter: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
