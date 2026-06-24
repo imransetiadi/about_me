@@ -22,6 +22,17 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
     try {
       const currentTheme = document.documentElement.getAttribute("data-theme") as "dark" | "light";
       if (currentTheme) {
@@ -126,7 +137,12 @@ export default function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <button className={styles.themeToggle} onClick={toggleTheme} aria-label="Toggle theme">
+            <button
+              className={styles.themeToggle}
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              aria-pressed={theme === "dark"}
+            >
               {theme === "dark" ? (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="5"></circle>
@@ -150,6 +166,7 @@ export default function Header() {
               className={styles.menuBtn}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -167,6 +184,14 @@ export default function Header() {
           </div>
         </div>
       </header>
+
+      {mobileMenuOpen && (
+        <div
+          className={styles.mobileBackdrop}
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
 
       <div className={`${styles.mobileDrawer} ${mobileMenuOpen ? styles.mobileDrawerActive : ""}`}>
         <ul className={styles.mobileNavLinks}>

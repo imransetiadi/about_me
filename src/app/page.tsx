@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import ScrollReveal from "../components/ScrollReveal";
 import Skills from "../components/Skills";
 import styles from "./page.module.css";
+import { FadeIn } from "../components/FadeIn";
+import ContactForm from "../components/ContactForm";
 
 const experiences = [
   {
@@ -93,7 +95,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section id="home" className={styles.hero}>
+        <FadeIn delay={0.1}><section id="home" className={styles.hero}>
           <div className={`container ${styles.heroGrid}`}>
             <div className={styles.heroCopy}>
               <span className={styles.eyebrow}>Hello, World_</span>
@@ -123,9 +125,9 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
-        <section id="about" className={styles.section}>
+        <FadeIn delay={0.1}><section id="about" className={styles.section}>
           <div className={`container ${styles.aboutGrid}`}>
             <div className={`${styles.sectionIntro} ${styles.reveal}`}>
               <span className={styles.eyebrow}>About</span>
@@ -139,9 +141,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
-        <section id="experience" className={styles.section}>
+        <FadeIn delay={0.1}><section id="experience" className={styles.section}>
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
@@ -163,13 +165,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
-        <section id="skills" className={`${styles.section} ${styles.skillsSection}`}>
+        <FadeIn delay={0.1}><section id="skills" className={`${styles.section} ${styles.skillsSection}`}>
           <Skills />
-        </section>
+        </section></FadeIn>
 
-        <section id="education" className={styles.section}>
+        <FadeIn delay={0.1}><section id="education" className={styles.section}>
           <div className={`container ${styles.educationGrid}`}>
             <div className={`${styles.sectionIntro} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Education</span>
@@ -184,9 +186,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
-        <section id="certifications" className={styles.section}>
+        <FadeIn delay={0.1}><section id="certifications" className={styles.section}>
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Credentials</span>
@@ -212,37 +214,44 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
-        <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
+        <FadeIn delay={0.1}><section id="contact" className={`${styles.section} ${styles.contactSection}`}>
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Contact</span>
               <h2>Get in Touch</h2>
             </div>
-            <div className={styles.contactCards}>
-              {contacts.map((contact) => {
-                const content = (
-                  <>
-                    <span className={styles.contactIcon}><ContactIcon type={contact.icon} /></span>
-                    <h3>{contact.title}</h3>
-                    <p>{contact.value}</p>
-                  </>
-                );
+            <div className={styles.contactGrid}>
+              <div className={styles.contactInfo}>
+                <p className={styles.reveal}>Feel free to reach out for collaborations, project inquiries, or just to say hello! I will get back to you as soon as possible.</p>
+                <div className={styles.contactCards}>
+                  {contacts.map((contact) => {
+                    const content = (
+                      <>
+                        <span className={styles.contactIcon}><ContactIcon type={contact.icon} /></span>
+                        <h3>{contact.title}</h3>
+                        <p>{contact.value}</p>
+                      </>
+                    );
 
-                return contact.href ? (
-                  <a key={contact.title} href={contact.href} target={contact.href.startsWith("http") ? "_blank" : undefined} rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined} className={`${styles.contactCard} ${styles.reveal}`}>
-                    {content}
-                  </a>
-                ) : (
-                  <div key={contact.title} className={`${styles.contactCard} ${styles.reveal}`}>
-                    {content}
-                  </div>
-                );
-              })}
+                    return contact.href ? (
+                      <a key={contact.title} href={contact.href} target={contact.href.startsWith("http") ? "_blank" : undefined} rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined} className={`${styles.contactCard} ${styles.reveal}`}>
+                        {content}
+                      </a>
+                    ) : (
+                      <div key={contact.title} className={`${styles.contactCard} ${styles.reveal}`}>
+                        {content}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <ContactForm />
             </div>
           </div>
-        </section>
+        </section></FadeIn>
       </main>
 
       <footer className={styles.footer}>
