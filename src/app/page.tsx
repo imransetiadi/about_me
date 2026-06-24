@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import ScrollReveal from "../components/ScrollReveal";
 import Skills from "../components/Skills";
 import styles from "./page.module.css";
+import { FadeIn } from "../components/FadeIn";
 
 const experiences = [
   {
@@ -123,7 +124,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </section></FadeIn>
+        </section>
 
         <section id="about" className={styles.section}>
           <div className={`container ${styles.aboutGrid}`}>
@@ -139,7 +140,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section></FadeIn>
+        </section>
 
         <FadeIn delay={0.1}><section id="experience" className={styles.section}>
           <div className="container">
@@ -167,7 +168,7 @@ export default function Home() {
 
         <section id="skills" className={`${styles.section} ${styles.skillsSection}`}>
           <Skills />
-        </section></FadeIn>
+        </section>
 
         <section id="education" className={styles.section}>
           <div className={`container ${styles.educationGrid}`}>
@@ -184,7 +185,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section></FadeIn>
+        </section>
 
         <FadeIn delay={0.2}><section id="certifications" className={styles.section}>
           <div className="container">
