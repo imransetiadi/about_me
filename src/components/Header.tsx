@@ -22,6 +22,23 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const originalTitle = document.title;
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        document.title = "Come back! 👋";
+      } else {
+        document.title = originalTitle;
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      document.title = originalTitle;
+    };
+  }, []);
+
+  useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
