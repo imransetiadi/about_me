@@ -5,6 +5,7 @@ import Skills from "../components/Skills";
 import styles from "./page.module.css";
 import { FadeIn } from "../components/FadeIn";
 import ContactForm from "../components/ContactForm";
+import ScrollToTop from "../components/ScrollToTop";
 
 const experiences = [
   {
@@ -261,6 +262,7 @@ export default function Home() {
       </footer>
 
       <ScrollReveal />
+      <ScrollToTop />
     </div>
   );
 }
