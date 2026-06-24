@@ -106,7 +106,6 @@ export default function Home() {
               <div className={styles.heroActions}>
                 <a href="#contact" className="btn btn-primary">Get in Touch</a>
                 <a href="#experience" className="btn btn-secondary">View Experience</a>
-                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Download CV</a>
               </div>
               <div className={styles.heroSocials}>
                 <a href="https://www.linkedin.com/in/imransetiadi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
