@@ -375,7 +375,8 @@
 .contactForm,
 .skillCategory,
 .statCard,
-.contactCard {
+.contactCard,
+.projectCard {
   border: var(--border-width) solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-panel);
@@ -389,7 +390,8 @@
 .certCard:hover,
 .skillCategory:hover,
 .statCard:hover,
-.contactCard:hover {
+.contactCard:hover,
+.projectCard:hover {
   transform: translate(-3px, -3px);
   box-shadow: var(--shadow-brutal-lg);
 }
@@ -398,7 +400,8 @@
 .timelineCard:active,
 .certCard:active,
 .skillCategory:active,
-.contactCard:active {
+.contactCard:active,
+.projectCard:active {
   transform: translate(2px, 2px);
   box-shadow: 1px 1px 0 var(--border);
 }
@@ -457,7 +460,8 @@
 .timelineCard,
 .educationCard,
 .certCard,
-.contactForm {
+.contactForm,
+.projectCard {
   min-width: 0;
 }
 
@@ -723,6 +727,109 @@
 
 .educationCard p {
   margin-top: 14px;
+}
+
+/* ─── PROJECTS ─── */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.projectImage {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius);
+  border: var(--border-width) solid var(--border);
+  object-fit: contain;
+  background: var(--bg-body);
+  flex-shrink: 0;
+}
+
+.projectTitleArea {
+  min-width: 0;
+}
+
+.projectTitleArea h3 {
+  font-size: 19px;
+  margin: 0;
+}
+
+.projectTagline {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.projectDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.projectTags small {
+  background: var(--bg-body);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.projectActions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.projectActions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: var(--border-width) solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-panel);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.projectActions a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--border);
+}
+
+.projectActions a:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
 }
 
 /* ─── CERTIFICATIONS ─── */
@@ -1119,7 +1226,8 @@
 
   .cardGrid,
   .timeline,
-  .certGrid {
+  .certGrid,
+  .projectsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1188,6 +1296,7 @@
   .cardGrid,
   .timeline,
   .certGrid,
+  .projectsGrid,
   .contactCards {
     grid-template-columns: 1fr;
   }
@@ -1302,7 +1411,8 @@
   .educationCard,
   .contactForm,
   .skillCategory,
-  .contactCard {
+  .contactCard,
+  .projectCard {
     padding: 18px;
   }
 }

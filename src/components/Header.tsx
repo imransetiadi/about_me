@@ -3,12 +3,13 @@
 import { useEffect, useState } from "react";
 import styles from "../app/page.module.css";
 
-const sectionKeys = ["home", "about", "experience", "skills", "education", "certifications", "contact"] as const;
+const sectionKeys = ["home", "about", "experience", "projects", "skills", "education", "certifications", "contact"] as const;
 
 const sectionLabels: Record<typeof sectionKeys[number], string> = {
   home: "Home",
   about: "About",
   experience: "Experience",
+  projects: "Projects",
   skills: "Skills",
   education: "Education",
   certifications: "Certs",
