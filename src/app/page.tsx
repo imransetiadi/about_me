@@ -40,6 +40,15 @@ const experiences = [
 
 const projects = [
   {
+    title: "IDITA",
+    tagline: "Outfit harian, checkout tanpa ribet",
+    description: "A fast, clean e-commerce platform and Progressive Web App (PWA) built using Next.js with Clean Architecture. It features a real-time inventory catalog, a neobrutalist UI design, seamless manual payment flow with WhatsApp confirmation, custom order tracking links, and a comprehensive admin management console for product variants and transaction logs.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Zod", "PWA"],
+    image: "/idita-logo.svg",
+    link: "https://www.idita.web.id/",
+    github: "https://github.com/imransetiadi/idita",
+  },
+  {
     title: "Solatify",
     tagline: "Muslim daily worship companion",
     description: "An offline-first Muslim daily worship companion mobile application built using Flutter with Clean Architecture (feature-first approach). It features accurate prayer times calculation, automated adhan alarms, offline Al-Qur'an with audio, Qibla compass, mosque locator, daily worship tracker, and custom performance metrics.",
