@@ -116,6 +116,10 @@ function ContactIcon({ type }: { type: string }) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src="/icons/threads.png" alt="Threads logo" style={{ width: "20px", height: "20px", objectFit: "contain" }} />;
   }
+  if (type === "instagram") {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src="/icons/instagram.png" alt="Instagram logo" className="theme-instagram-icon" style={{ width: "20px", height: "20px", objectFit: "contain" }} />;
+  }
   return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg>;
 }
 

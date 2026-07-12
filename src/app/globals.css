@@ -345,3 +345,8 @@ text {
     page-break-inside: avoid;
   }
 }
+
+/* ─── INSTAGRAM DARK MODE ICON COLOR INVERSION ─── */
+[data-theme="dark"] .theme-instagram-icon {
+  filter: invert(1) brightness(1.8);
+}
