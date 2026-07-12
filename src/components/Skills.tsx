@@ -5,7 +5,7 @@ const skillGroups = [
   {
     title: "Cloud Platforms",
     skills: [
-      { name: "Red Hat OpenStack Platform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg" },
+      { name: "Red Hat OpenStack Platform", icon: "/icons/redhat.png" },
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
       { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
     ],
@@ -14,7 +14,7 @@ const skillGroups = [
     title: "Container & Orchestration",
     skills: [
       { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
-      { name: "OpenShift", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg" },
+      { name: "OpenShift", icon: "/icons/redhat.png" },
       { name: "Docker / Podman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
       { name: "Nginx", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
     ],
@@ -43,7 +43,7 @@ const skillGroups = [
   {
     title: "Linux & System Administration",
     skills: [
-      { name: "RHEL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg" },
+      { name: "RHEL", icon: "/icons/redhat.png" },
       { name: "CentOS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/centos/centos-original.svg" },
       { name: "Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" },
       { name: "KVM Virtualization", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
