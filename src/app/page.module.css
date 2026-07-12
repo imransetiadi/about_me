@@ -1475,3 +1475,42 @@
   transform: translateY(0);
   box-shadow: var(--shadow-brutal-sm);
 }
+
+/* ─── PROJECT FILTER BUTTONS ─── */
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius);
+  border: var(--border-width) solid var(--border);
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-brutal-sm);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.filterBtnActive {
+  background: var(--color-yellow) !important;
+  color: var(--text-primary) !important;
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.filterBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.filterBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}

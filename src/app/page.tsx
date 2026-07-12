@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import { FadeIn } from "../components/FadeIn";
 import ContactForm from "../components/ContactForm";
 import ScrollToTop from "../components/ScrollToTop";
+import Projects from "../components/Projects";
 
 const experiences = [
   {
@@ -65,6 +66,7 @@ const certifications = [
     issuer: "Red Hat",
     image: "/rhcsa-ex200.png",
     alt: "Red Hat Certified System Administrator badge",
+    url: "https://www.credly.com/badges/4f93336f-e09d-43ff-980e-790ddfce92e6",
   },
   {
     title: "Red Hat Certified System Administrator in OpenShift",
@@ -72,6 +74,7 @@ const certifications = [
     issuer: "Red Hat",
     image: "/rhcsa-openshift.png",
     alt: "Red Hat OpenShift certification badge",
+    url: "https://www.credly.com/badges/4263d0e9-f93d-4f6b-8172-cc72210c2f37",
   },
   {
     title: "CompTIA Linux+ ce",
@@ -79,6 +82,7 @@ const certifications = [
     issuer: "CompTIA",
     image: "/comptia-linux.png",
     alt: "CompTIA Linux+ badge",
+    url: "https://www.credly.com/badges/be235685-cb60-46dc-8425-32522593e078",
   },
 ];
 
@@ -188,58 +192,7 @@ export default function Home() {
         </section></FadeIn>
 
         <FadeIn delay={0.1}><section id="projects" className={styles.section}>
-          <div className="container">
-            <div className={`${styles.sectionHeader} ${styles.reveal}`}>
-              <span className={styles.eyebrow}>Portfolio</span>
-              <h2>Featured Projects</h2>
-            </div>
-
-            <div className={styles.projectsGrid}>
-              {projects.map((project) => (
-                <article key={project.title} className={`${styles.projectCard} ${styles.reveal}`}>
-                  <div className={styles.projectHeader}>
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} logo`}
-                      width={64}
-                      height={64}
-                      className={styles.projectImage}
-                    />
-                    <div className={styles.projectTitleArea}>
-                      <h3>{project.title}</h3>
-                      <p className={styles.projectTagline}>{project.tagline}</p>
-                    </div>
-                  </div>
-                  <p className={styles.projectDescription}>{project.description}</p>
-                  <div className={styles.projectTags}>
-                    {project.tags.map((tag) => (
-                      <small key={tag}>{tag}</small>
-                    ))}
-                  </div>
-                  <div className={styles.projectActions}>
-                    {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                        Visit Website
-                      </a>
-                    )}
-                    {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                      </a>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+          <Projects initialProjects={projects} />
         </section></FadeIn>
 
         <FadeIn delay={0.1}><section id="skills" className={`${styles.section} ${styles.skillsSection}`}>
@@ -272,20 +225,23 @@ export default function Home() {
 
             <div className={styles.certGrid}>
               {certifications.map((cert) => (
-                <article key={cert.title} className={`${styles.certCard} ${styles.reveal}`}>
+                <a key={cert.title} href={cert.url} target="_blank" rel="noopener noreferrer" className={`${styles.certCard} ${styles.reveal}`}>
                   <Image src={cert.image} alt={cert.alt} width={112} height={112} className={styles.certImage} />
                   <div>
                     <span>{cert.issuer}</span>
                     <h3>{cert.title}</h3>
                     <small>{cert.code}</small>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
 
-            <div className={styles.centerAction}>
+            <div className={styles.centerAction} style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center" }}>
               <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                View All Certifications on Credly
+                View All on Credly
+              </a>
+              <a href="https://rhtapps.redhat.com/verify?certId=220-188-205" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Verify Red Hat ID: 220-188-205
               </a>
             </div>
           </div>
