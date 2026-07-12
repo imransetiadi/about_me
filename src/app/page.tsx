@@ -91,6 +91,8 @@ const contacts = [
   { title: "Location", value: "Jakarta, Indonesia", icon: "location" },
   { title: "LinkedIn", value: "imransetiadi", href: "https://www.linkedin.com/in/imransetiadi/", icon: "linkedin" },
   { title: "GitHub", value: "imransetiadi", href: "https://github.com/imransetiadi", icon: "github" },
+  { title: "Threads", value: "@imran_setiadi", href: "https://www.threads.net/@imran_setiadi", icon: "threads" },
+  { title: "Instagram", value: "@imran_setiadi", href: "https://www.instagram.com/imran_setiadi/", icon: "instagram" },
 ];
 
 function ContactIcon({ type }: { type: string }) {
@@ -108,6 +110,9 @@ function ContactIcon({ type }: { type: string }) {
   }
   if (type === "github") {
     return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m16 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 22 4.8 5 5 0 0 0 21.9 1S20.7.6 18 2.5a13.4 13.4 0 0 0-7 0C8.3.6 7.1 1 7.1 1A5 5 0 0 0 7 4.8a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>;
+  }
+  if (type === "threads") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.17 11.23c-.34.2-.67.33-1 .4-.33.07-.66.11-1 .11-.78 0-1.42-.25-1.92-.74-.5-.5-.75-1.14-.75-1.92s.25-1.42.75-1.92c.5-.5 1.14-.75 1.92-.75s1.42.25 1.92.75c.5.5.75 1.14.75 1.92v.32c0 .4-.1.72-.3.97-.2.25-.49.38-.87.38-.34 0-.61-.12-.8-.35-.19-.23-.29-.56-.29-.98v-2.31h-1.63v.5c-.24-.39-.62-.58-1.12-.58-.58 0-1.06.22-1.43.67-.37.45-.56 1-.56 1.66s.19 1.21.56 1.66c.37.45.85.67 1.43.67.5 0 .88-.19 1.12-.58v.48c0 .64.18 1.15.54 1.52.36.37.89.55 1.59.55.58 0 1.1-.11 1.56-.34s.8-.57 1.02-1.02c.22-.45.33-.97.33-1.56v-2.5c0-1.46-.46-2.58-1.38-3.37-.92-.79-2.19-1.18-3.81-1.18s-2.89.39-3.81 1.18c-.92.79-1.38 1.91-1.38 3.37s.46 2.58 1.38 3.37c.92.79 2.19 1.18 3.81 1.18.78 0 1.5-.1 2.16-.31s1.23-.52 1.71-.93l-.93-1.18c-.37.28-.85.49-1.44.62-.59.13-1.17.2-1.74.2-1.12 0-1.97-.26-2.55-.78-.58-.52-.87-1.31-.87-2.37s.29-1.85.87-2.37c.58-.52 1.43-.78 2.55-.78s1.97.26 2.55.78c.58.52.87 1.31.87 2.37v2.5c0 .24-.04.45-.12.63-.08.18-.21.32-.38.42zm-4.7-2.73c0-.38.1-.68.3-.9.2-.22.45-.33.75-.33s.55.11.75.33c.2.22.3.52.3.9s-.1.68-.3.9c-.2.22-.45.33-.75.33s-.55-.11-.75-.33c-.2-.22-.3-.52-.3-.9z"/></svg>;
   }
   return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg>;
 }
@@ -131,6 +136,8 @@ export default function Home() {
               <div className={styles.heroSocials}>
                 <a href="https://www.linkedin.com/in/imransetiadi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com/imransetiadi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com/imran_setiadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.threads.net/@imran_setiadi" target="_blank" rel="noopener noreferrer">Threads</a>
                 <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer">Credly</a>
               </div>
             </div>

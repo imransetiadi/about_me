@@ -86,6 +86,8 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/imransetiadi",
       "https://www.linkedin.com/in/imransetiadi/",
+      "https://www.threads.net/@imran_setiadi",
+      "https://www.instagram.com/imran_setiadi/",
       "https://www.credly.com/users/imran-setiadi",
     ],
     knowsAbout: ["OpenStack", "OpenShift", "Kubernetes", "Linux", "DevOps", "Observability", "Automation"],
