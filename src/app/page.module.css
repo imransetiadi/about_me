@@ -1027,6 +1027,7 @@
   border-radius: var(--radius);
   background: var(--bg-secondary);
   color: var(--text-primary);
+  font-size: 16px;
   resize: vertical;
   max-width: 100%;
   box-shadow: 2px 2px 0 var(--border);
