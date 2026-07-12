@@ -36,8 +36,8 @@ const skillGroups = [
       { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
       { name: "ChatGPT (AI)", icon: "/icons/chatgpt.svg" },
-      { name: "Claude (AI)", icon: "/icons/claude.svg" },
-      { name: "Gemini (AI)", icon: "/icons/gemini.svg" },
+      { name: "Claude (AI)", icon: "/icons/claude.png" },
+      { name: "Gemini (AI)", icon: "/icons/gemini.png" },
     ],
   },
   {
