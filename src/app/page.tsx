@@ -88,11 +88,9 @@ const certifications = [
 
 const contacts = [
   { title: "Email", value: "imransetiadi22@gmail.com", href: "mailto:imransetiadi22@gmail.com", icon: "mail" },
-  { title: "WhatsApp", value: "+62 821 1028 6777", href: "https://wa.me/6282110286777", icon: "phone" },
   { title: "Location", value: "Jakarta, Indonesia", icon: "location" },
   { title: "LinkedIn", value: "imransetiadi", href: "https://www.linkedin.com/in/imransetiadi/", icon: "linkedin" },
   { title: "GitHub", value: "imransetiadi", href: "https://github.com/imransetiadi", icon: "github" },
-  { title: "Instagram", value: "@imran_setiadi", href: "https://www.instagram.com/imran_setiadi/", icon: "instagram" },
 ];
 
 function ContactIcon({ type }: { type: string }) {
@@ -133,7 +131,6 @@ export default function Home() {
               <div className={styles.heroSocials}>
                 <a href="https://www.linkedin.com/in/imransetiadi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com/imransetiadi" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.instagram.com/imran_setiadi/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.credly.com/users/imran-setiadi" target="_blank" rel="noopener noreferrer">Credly</a>
               </div>
             </div>
