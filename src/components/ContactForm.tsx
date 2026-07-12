@@ -95,6 +95,7 @@ export default function ContactForm() {
           placeholder="Your name"
           required
           disabled={isSubmitting}
+          autoComplete="name"
         />
       </div>
 
@@ -109,6 +110,7 @@ export default function ContactForm() {
           placeholder="your@email.com"
           required
           disabled={isSubmitting}
+          autoComplete="email"
         />
       </div>
 
