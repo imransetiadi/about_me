@@ -732,7 +732,7 @@
 /* ─── PROJECTS ─── */
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
   gap: 20px;
   justify-content: center;
   max-width: 1000px;
@@ -759,7 +759,7 @@
   border-radius: var(--radius);
   border: var(--border-width) solid var(--border);
   object-fit: contain;
-  background: var(--bg-body);
+  background: var(--bg-muted);
   flex-shrink: 0;
 }
 
@@ -794,7 +794,7 @@
 }
 
 .projectTags small {
-  background: var(--bg-body);
+  background: var(--bg-muted);
   border: 1px solid var(--border);
   padding: 4px 8px;
   border-radius: 4px;
