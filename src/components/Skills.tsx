@@ -51,6 +51,13 @@ const skillGroups = [
     ],
   },
   {
+    title: "Automation & IaC",
+    skills: [
+      { name: "Ansible", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" },
+      { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+    ],
+  },
+  {
     title: "Monitoring & Observability",
     skills: [
       { name: "Prometheus", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
