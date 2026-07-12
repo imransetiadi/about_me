@@ -83,8 +83,7 @@ describe("QA Test Suite - Portfolio Home Page", () => {
     render(<Home />);
     
     // Select the "Flutter" filter button
-    const filterButtons = screen.getAllByRole("button", { name: "Flutter" });
-    const flutterBtn = filterButtons.find(btn => btn.hasAttribute("aria-pressed"));
+    const flutterBtn = screen.getByRole("button", { name: "Flutter" });
     expect(flutterBtn).toBeTruthy();
 
     // IDITA project is visible by default

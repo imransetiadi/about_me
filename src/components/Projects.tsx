@@ -70,27 +70,7 @@ export default function Projects({ initialProjects }: ProjectsProps) {
             <p className={project.title === "IDITA" ? styles.projectDescription : styles.projectDescription} style={{ textAlign: "justify" }}>
               {project.description}
             </p>
-            <div className={styles.projectTags}>
-              {project.tags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setActiveTag(tag)}
-                  style={{
-                    background: activeTag === tag ? "var(--color-yellow)" : "var(--bg-muted)",
-                    border: "1px solid var(--border)",
-                    padding: "4px 8px",
-                    borderRadius: "4px",
-                    fontSize: "11px",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                    margin: 0
-                  }}
-                  title={`Filter by ${tag}`}
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
+
             <div className={styles.projectActions}>
               {project.link && (
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
