@@ -148,15 +148,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={styles.heroPanel} aria-label="Profile overview">
-              <Image
-                src="/profile.jpg"
-                alt="Imran Setiadi"
-                width={520}
-                height={620}
-                priority
-                className={styles.profileImage}
-              />
+            <div className={styles.heroPanelWrapper}>
+              <div className={styles.heroPanel} aria-label="Profile overview">
+                <Image
+                  src="/profile.jpg"
+                  alt="Imran Setiadi"
+                  width={520}
+                  height={620}
+                  priority
+                  className={styles.profileImage}
+                />
+              </div>
             </div>
           </div>
         </section></FadeIn>
