@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Portfolio of Imran Setiadi, a Cloud Engineer focused on resilient cloud infrastructure.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#111827',
-    theme_color: '#2563EB',
+    background_color: '#fffdf8',
+    theme_color: '#e8453c',
     icons: [
       {
         src: '/icon.svg',
