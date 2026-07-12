@@ -136,7 +136,7 @@ export default function Home() {
               <h2 className={styles.heroRole}>Cloud Engineer</h2>
               <p className={styles.heroSubtitle}>Specializing in architecting resilient cloud-native infrastructure, optimizing enterprise container platforms, and driving automation to deliver secure, scalable, and highly available systems.</p>
               <div className={styles.heroActions}>
-                <a href="#contact" className="btn btn-primary">Get in Touch</a>
+                <a href="#contact" className="btn btn-blue">Get in Touch</a>
                 <a href="#experience" className="btn btn-secondary">View Experience</a>
               </div>
               <div className={styles.heroSocials}>

@@ -232,8 +232,8 @@
   padding: 6px 14px;
   border: var(--border-width) solid var(--border);
   border-radius: var(--radius);
-  background: var(--color-yellow);
-  color: #2b2b2b;
+  background: var(--color-blue);
+  color: #ffffff;
   box-shadow: var(--shadow-brutal-sm);
   font-size: 12px;
   font-weight: 800;
@@ -257,7 +257,7 @@
 
 .heroRole {
   margin-top: 8px;
-  color: var(--color-primary);
+  color: var(--color-blue);
   font-size: clamp(20px, 3vw, 28px);
   font-weight: 700;
   padding: 4px 0;
