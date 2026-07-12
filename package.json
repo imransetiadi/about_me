@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.41.0",
     "next": "^16.2.9",
     "react": "^19.2.7",
@@ -27,6 +28,7 @@
     "eslint-config-next": "16.2.7",
     "happy-dom": "^20.10.6",
     "typescript": "^5",
+    "vite": "^6.4.3",
     "vitest": "^2.0.0"
   }
 }
