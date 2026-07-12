@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../app/page.module.css";
 
@@ -8,7 +6,6 @@ interface Project {
   title: string;
   tagline: string;
   description: string;
-  tags: string[];
   image: string;
   link?: string;
   github?: string;
@@ -19,16 +16,6 @@ interface ProjectsProps {
 }
 
 export default function Projects({ initialProjects }: ProjectsProps) {
-  const [activeTag, setActiveTag] = useState<string>("All");
-
-  // Get unique tags across all projects
-  const allTags = ["All", ...Array.from(new Set(initialProjects.flatMap((p) => p.tags)))];
-
-  const filteredProjects =
-    activeTag === "All"
-      ? initialProjects
-      : initialProjects.filter((p) => p.tags.includes(activeTag));
-
   return (
     <div className="container">
       <div className={`${styles.sectionHeader} ${styles.reveal}`}>
@@ -36,23 +23,9 @@ export default function Projects({ initialProjects }: ProjectsProps) {
         <h2>Featured Projects</h2>
       </div>
 
-      {/* Filter Tags Buttons */}
-      <div className={styles.filterContainer}>
-        {allTags.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => setActiveTag(tag)}
-            className={`${styles.filterBtn} ${activeTag === tag ? styles.filterBtnActive : ""}`}
-            aria-pressed={activeTag === tag}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
-
       {/* Projects Grid */}
       <div className={styles.projectsGrid}>
-        {filteredProjects.map((project) => (
+        {initialProjects.map((project) => (
           <article key={project.title} className={`${styles.projectCard} ${styles.reveal}`}>
             <div className={styles.projectHeader}>
               <Image
@@ -67,7 +40,7 @@ export default function Projects({ initialProjects }: ProjectsProps) {
                 <p className={styles.projectTagline}>{project.tagline}</p>
               </div>
             </div>
-            <p className={project.title === "IDITA" ? styles.projectDescription : styles.projectDescription} style={{ textAlign: "justify" }}>
+            <p className={styles.projectDescription} style={{ textAlign: "justify" }}>
               {project.description}
             </p>
 

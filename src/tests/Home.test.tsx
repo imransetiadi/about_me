@@ -78,30 +78,4 @@ describe("QA Test Suite - Portfolio Home Page", () => {
     expect((emailInput as HTMLInputElement).value).toBe("qa@example.com");
     expect((messageInput as HTMLTextAreaElement).value).toBe("Interested in hiring for a project.");
   });
-
-  it("filters projects when clicking on a technology filter button", () => {
-    render(<Home />);
-    
-    // Select the "Flutter" filter button
-    const flutterBtn = screen.getByRole("button", { name: "Flutter" });
-    expect(flutterBtn).toBeTruthy();
-
-    // IDITA project is visible by default
-    expect(screen.queryByRole("heading", { level: 3, name: "IDITA" })).toBeTruthy();
-
-    // Click on "Flutter" filter button
-    fireEvent.click(flutterBtn);
-
-    // Now, only Solatify is shown (which has Flutter tag), IDITA should be hidden
-    expect(screen.queryByRole("heading", { level: 3, name: "Solatify" })).toBeTruthy();
-    expect(screen.queryByRole("heading", { level: 3, name: "IDITA" })).toBeNull();
-
-    // Click on "All" filter button
-    const allBtn = screen.getByRole("button", { name: "All" });
-    fireEvent.click(allBtn);
-
-    // Now, both are shown again
-    expect(screen.queryByRole("heading", { level: 3, name: "IDITA" })).toBeTruthy();
-    expect(screen.queryByRole("heading", { level: 3, name: "Solatify" })).toBeTruthy();
-  });
 });
