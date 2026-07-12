@@ -46,7 +46,6 @@ const projects = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Zod", "PWA"],
     image: "/idita-logo.svg",
     link: "https://www.idita.web.id/",
-    github: "https://github.com/imransetiadi/idita",
   },
   {
     title: "Solatify",
