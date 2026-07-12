@@ -823,6 +823,7 @@
 }
 
 .projectActions a:hover {
+  background: var(--color-yellow-soft);
   transform: translate(-2px, -2px);
   box-shadow: 2px 2px 0 var(--border);
 }
