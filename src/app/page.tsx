@@ -46,7 +46,7 @@ const projects = [
     description: "A fast, clean e-commerce platform and Progressive Web App (PWA) built using Next.js with Clean Architecture. It features a real-time inventory catalog, a neobrutalist UI design, seamless manual payment flow with WhatsApp confirmation, custom order tracking links, and a comprehensive admin management console for product variants and transaction logs.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Zod", "PWA"],
     image: "/idita-logo.svg",
-    link: "https://www.gaskeunn.web.id/",
+    link: "https://iditastore.my.id/",
   },
   {
     title: "Solatify",
