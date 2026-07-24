@@ -1,13 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="idita">
-  <rect width="512" height="512" rx="112" fill="#fdf8ef"/>
-  <path d="M120 386h268l28-224H92l28 224Z" fill="#12d1a2" stroke="#2d2d2d" stroke-width="24" stroke-linejoin="round"/>
-  <path d="M176 168c0-54 32-88 80-88s80 34 80 88" fill="none" stroke="#2d2d2d" stroke-width="24" stroke-linecap="round"/>
-  <path d="M176 168c0-54 32-88 80-88s80 34 80 88" fill="none" stroke="#fdf8ef" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="184" cy="210" r="15" fill="#2d2d2d"/>
-  <circle cx="328" cy="210" r="15" fill="#2d2d2d"/>
-  <rect x="160" y="246" width="192" height="88" rx="32" fill="#fac638" stroke="#2d2d2d" stroke-width="18"/>
-  <path d="M223 286h66" stroke="#2f6df6" stroke-width="26" stroke-linecap="round"/>
-  <circle cx="310" cy="286" r="13" fill="#ef4444"/>
-  <path d="M402 92l13 31 32 13-32 13-13 31-13-31-32-13 32-13 13-31Z" fill="#ef4444" stroke="#2d2d2d" stroke-width="12" stroke-linejoin="round"/>
-  <path d="M102 92l8 19 20 8-20 8-8 19-8-19-20-8 20-8 8-19Z" fill="#2f6df6" stroke="#2d2d2d" stroke-width="9" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Gaskeunn">
+  <rect width="512" height="512" rx="112" fill="#12d1a2"/>
+  <path d="M384 184c-26-48-72-76-130-76-86 0-150 64-150 148s64 148 150 148c57 0 105-24 136-63V246H258v62h62c-15 22-38 34-66 34-49 0-84-36-84-86s35-86 84-86c31 0 55 13 71 37l59-23Z" fill="#fdf8ef" stroke="#2d2d2d" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M299 177h84l-51 70h52L267 363l32-87h-48l48-99Z" fill="#fac638" stroke="#2d2d2d" stroke-width="14" stroke-linejoin="round"/>
 </svg>
