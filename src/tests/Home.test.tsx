@@ -113,6 +113,12 @@ describe("QA Test Suite - Portfolio Home Page", () => {
     expect(screen.getByText("Red Hat Certified System Administrator")).toBeTruthy();
     expect(screen.getByText("Red Hat Certified System Administrator in OpenShift")).toBeTruthy();
     expect(screen.getByText("CompTIA Linux+ ce")).toBeTruthy();
+
+    // AWS Certified Cloud Practitioner links to its Credly badge
+    expect(screen.getByText("AWS Certified Cloud Practitioner")).toBeTruthy();
+    const awsCard = screen.getByText("AWS Certified Cloud Practitioner").closest("a") as HTMLAnchorElement;
+    expect(awsCard.getAttribute("href")).toBe("https://www.credly.com/badges/879b1263-8cee-43c1-a9d1-5c37d6f034f3");
+    expect(screen.getByAltText("AWS Certified Cloud Practitioner badge")).toBeTruthy();
   });
 
   it("handles contact form inputs correctly", () => {

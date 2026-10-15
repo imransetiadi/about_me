@@ -45,6 +45,8 @@ export const SITE_KEYWORDS = [
   "OpenShift",
   "RHOSO",
   "Kubernetes",
+  "AWS",
+  "AWS Certified Cloud Practitioner",
   "Linux",
   "Ansible",
   "DevOps",

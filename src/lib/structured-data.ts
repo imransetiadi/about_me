@@ -21,6 +21,11 @@ const certifications = [
     issuer: "CompTIA",
     url: "https://www.credly.com/badges/be235685-cb60-46dc-8425-32522593e078",
   },
+  {
+    name: "AWS Certified Cloud Practitioner (CLF-C02)",
+    issuer: "Amazon Web Services Training and Certification",
+    url: "https://www.credly.com/badges/879b1263-8cee-43c1-a9d1-5c37d6f034f3",
+  },
 ];
 
 const schemaTypeFor: Record<Project["kind"], string> = {
@@ -118,6 +123,7 @@ export function buildStructuredData() {
       "Red Hat OpenStack Platform",
       "OpenShift",
       "Kubernetes",
+      "Amazon Web Services (AWS)",
       "Linux",
       "DevOps",
       "Ansible",

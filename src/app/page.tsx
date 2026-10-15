@@ -65,6 +65,14 @@ const certifications = [
     alt: "CompTIA Linux+ badge",
     url: "https://www.credly.com/badges/be235685-cb60-46dc-8425-32522593e078",
   },
+  {
+    title: "AWS Certified Cloud Practitioner",
+    code: "CLF-C02",
+    issuer: "Amazon Web Services",
+    image: "/aws-cloud-practitioner.png",
+    alt: "AWS Certified Cloud Practitioner badge",
+    url: "https://www.credly.com/badges/879b1263-8cee-43c1-a9d1-5c37d6f034f3",
+  },
 ];
 
 const contacts = [
