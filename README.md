@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## SEO configuration
+
+Site-wide SEO values (canonical URL, title, description, keywords, author profile) live in
+`src/data/site.ts`; portfolio projects live in `src/data/projects.ts`. Both feed the metadata,
+schema.org JSON-LD, sitemap, robots and manifest, so update them in one place.
+
+Optional environment variables (set them in Vercel for the production deployment):
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Overrides the canonical origin (defaults to `https://imransetiadi.web.id`). |
+| `GOOGLE_SITE_VERIFICATION` | Emits the Google Search Console verification meta tag when set. |
+
+The social preview image is generated from `src/app/opengraph-image.png` (1200×630) with its alt text in
+`src/app/opengraph-image.alt.txt`.

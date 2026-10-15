@@ -9,6 +9,19 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // SEO: consolidate every alias onto the canonical production host so search
+  // engines index a single origin (www + *.vercel.app -> apex domain).
+  async redirects() {
+    const canonicalHost = "imransetiadi.web.id";
+    const aliasHosts = ["www.imransetiadi.web.id", "imransetiadi.vercel.app"];
+
+    return aliasHosts.map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host", value: host }],
+      destination: `https://${canonicalHost}/:path*`,
+      permanent: true,
+    }));
+  },
   async headers() {
     const cspHeader = `
       default-src 'self';

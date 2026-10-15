@@ -1,12 +1,17 @@
 import type { MetadataRoute } from 'next';
+import { SITE_URL } from '../data/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://imransetiadi.github.io',
+      url: `${SITE_URL}/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
+      images: [
+        `${SITE_URL}/profile.jpg`,
+        `${SITE_URL}/seamlessmigrate-dashboard.webp`,
+      ],
     },
   ];
 }

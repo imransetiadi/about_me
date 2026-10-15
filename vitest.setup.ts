@@ -4,7 +4,7 @@ import { vi } from "vitest";
 
 // Mock Next.js Image component
 vi.mock("next/image", () => ({
-  default: function MockImage({ src, alt, priority, unoptimized, ...props }: any) {
+  default: function MockImage({ src, alt, priority, preload, unoptimized, fetchPriority, ...props }: any) {
     return React.createElement("img", { src, alt, ...props });
   },
 }));

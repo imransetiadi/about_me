@@ -72,7 +72,7 @@ export default function Skills() {
     <div className="container">
       <div className={`${styles.sectionHeader} ${styles.reveal}`}>
         <span className={styles.eyebrow}>Skills</span>
-        <h2>Technical Skills</h2>
+        <h2 id="skills-heading">Technical Skills</h2>
       </div>
 
       <div className={styles.skillCategories}>

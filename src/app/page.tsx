@@ -7,6 +7,7 @@ import { FadeIn } from "../components/FadeIn";
 import ContactForm from "../components/ContactForm";
 import ScrollToTop from "../components/ScrollToTop";
 import Projects from "../components/Projects";
+import { projects } from "../data/projects";
 
 const experiences = [
   {
@@ -36,26 +37,6 @@ const experiences = [
     period: "3 months",
     text: "Supported enterprise-level IT and network operations, assisted with active directory management, resolved network connectivity issues, and maintained high reliability across corporate ICT systems.",
     tags: ["ICT", "Networking"],
-  },
-];
-
-const projects = [
-  {
-    title: "IDITA",
-    tagline: "Outfit harian, checkout tanpa ribet",
-    description: "A fast, clean e-commerce platform and Progressive Web App (PWA) built using Next.js with Clean Architecture. It features a real-time inventory catalog, a neobrutalist UI design, seamless manual payment flow with WhatsApp confirmation, custom order tracking links, and a comprehensive admin management console for product variants and transaction logs.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Zod", "PWA"],
-    image: "/idita-logo.svg",
-link: "https://www.iditastore.my.id/",
-  },
-  {
-    title: "Solatify",
-    tagline: "Muslim daily worship companion",
-    description: "An offline-first Muslim daily worship companion mobile application built using Flutter with Clean Architecture (feature-first approach). It features accurate prayer times calculation, automated adhan alarms, offline Al-Qur'an with audio, Qibla compass, mosque locator, daily worship tracker, and custom performance metrics.",
-    tags: ["Flutter", "Dart", "Riverpod", "Hive", "GoRouter", "Local Notifications"],
-    image: "/solatify-logo.png",
-    link: "https://solatify.my.id/",
-    github: "https://github.com/imransetiadi/solatify",
   },
 ];
 
@@ -129,10 +110,10 @@ export default function Home() {
       <Header />
 
       <main>
-        <FadeIn delay={0.1}><section id="home" className={styles.hero}>
+        <FadeIn delay={0.1}><section id="home" className={styles.hero} aria-labelledby="hero-heading">
           <div className={`container ${styles.heroGrid}`}>
             <div className={styles.heroCopy}>
-              <h1>Imran Setiadi</h1>
+              <h1 id="hero-heading">Imran Setiadi</h1>
               <h2 className={styles.heroRole}>Cloud Engineer</h2>
               <p className={styles.heroSubtitle}>Specializing in architecting resilient cloud-native infrastructure, optimizing enterprise container platforms, and driving automation to deliver secure, scalable, and highly available systems.</p>
               <div className={styles.heroActions}>
@@ -155,7 +136,8 @@ export default function Home() {
                   alt="Imran Setiadi"
                   width={520}
                   height={620}
-                  priority
+                  preload
+                  fetchPriority="high"
                   className={styles.profileImage}
                 />
               </div>
@@ -163,10 +145,11 @@ export default function Home() {
           </div>
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="about" className={styles.section}>
+        <FadeIn delay={0.1}><section id="about" className={styles.section} aria-labelledby="about-heading">
           <div className={`container ${styles.aboutGrid}`}>
             <div className={`${styles.sectionIntro} ${styles.reveal}`}>
               <span className={styles.eyebrow}>About</span>
+              <h2 id="about-heading">About Me</h2>
             </div>
             <div className={`${styles.aboutText} ${styles.reveal}`}>
               <p>
@@ -179,10 +162,11 @@ export default function Home() {
           </div>
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="experience" className={styles.section}>
+        <FadeIn delay={0.1}><section id="experience" className={styles.section} aria-labelledby="experience-heading">
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Experience</span>
+              <h2 id="experience-heading">Work Experience</h2>
             </div>
 
             <div className={styles.timeline}>
@@ -203,19 +187,19 @@ export default function Home() {
           </div>
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="projects" className={styles.section}>
+        <FadeIn delay={0.1}><section id="projects" className={styles.section} aria-labelledby="projects-heading">
           <Projects initialProjects={projects} />
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="skills" className={`${styles.section} ${styles.skillsSection}`}>
+        <FadeIn delay={0.1}><section id="skills" className={`${styles.section} ${styles.skillsSection}`} aria-labelledby="skills-heading">
           <Skills />
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="education" className={styles.section}>
+        <FadeIn delay={0.1}><section id="education" className={styles.section} aria-labelledby="education-heading">
           <div className={`container ${styles.educationGrid}`}>
             <div className={`${styles.sectionIntro} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Education</span>
-              <h2>Education</h2>
+              <h2 id="education-heading">Education</h2>
             </div>
             <div className={`${styles.educationCard} ${styles.reveal}`}>
               <Image src="/unila-logo.png" alt="Universitas Lampung logo" width={64} height={64} className={styles.educationLogo} />
@@ -228,11 +212,11 @@ export default function Home() {
           </div>
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="certifications" className={styles.section}>
+        <FadeIn delay={0.1}><section id="certifications" className={styles.section} aria-labelledby="certifications-heading">
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Credentials</span>
-              <h2>Certifications</h2>
+              <h2 id="certifications-heading">Certifications</h2>
             </div>
 
             <div className={styles.certGrid}>
@@ -259,11 +243,11 @@ export default function Home() {
           </div>
         </section></FadeIn>
 
-        <FadeIn delay={0.1}><section id="contact" className={`${styles.section} ${styles.contactSection}`}>
+        <FadeIn delay={0.1}><section id="contact" className={`${styles.section} ${styles.contactSection}`} aria-labelledby="contact-heading">
           <div className="container">
             <div className={`${styles.sectionHeader} ${styles.reveal}`}>
               <span className={styles.eyebrow}>Contact</span>
-              <h2>Get in Touch</h2>
+              <h2 id="contact-heading">Get in Touch</h2>
             </div>
             <div className={styles.contactGrid}>
               <div className={styles.contactInfo}>

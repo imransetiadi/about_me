@@ -1,69 +1,77 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { AUTHOR, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL } from "../data/site";
+import { buildStructuredData, serializeStructuredData } from "../lib/structured-data";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
+
+// Set GOOGLE_SITE_VERIFICATION in the deployment environment to emit the
+// Google Search Console verification tag. Nothing is emitted when it is unset.
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://imransetiadi.github.io"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Imran Setiadi | Cloud Engineer",
+    default: SITE_TITLE,
     template: "%s | Imran Setiadi",
   },
-  description: "Cloud Engineer focused on resilient infrastructure, OpenStack, OpenShift, Kubernetes, Linux systems, automation, and observability.",
-  keywords: [
-    "Imran Setiadi",
-    "Cloud Engineer",
-    "OpenStack",
-    "OpenShift",
-    "Kubernetes",
-    "Linux",
-    "DevOps",
-    "Jakarta",
-    "IDITA",
-    "Solatify",
-    "E-commerce",
-    "PWA",
-    "Clean Architecture",
-    "TypeScript",
-    "Flutter",
-  ],
-  authors: [{ name: "Imran Setiadi" }],
-  creator: "Imran Setiadi",
-  verification: {
-    google: "google-site-verification-placeholder",
-  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: SITE_KEYWORDS,
+  authors: [{ name: AUTHOR.name, url: SITE_URL }],
+  creator: AUTHOR.name,
+  publisher: AUTHOR.name,
+  category: "technology",
+  referrer: "strict-origin-when-cross-origin",
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  // Open Graph / Twitter images come from the file convention in
+  // src/app/opengraph-image.png (+ opengraph-image.alt.txt).
   openGraph: {
-    title: "Imran Setiadi | Cloud Engineer",
-    description: "Portfolio of Imran Setiadi, a Cloud Engineer focused on reliable, secure, and observable infrastructure.",
-    url: "/",
-    siteName: "Imran Setiadi",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Imran Setiadi | Cloud Engineer",
-      },
-    ],
-    locale: "en_US",
     type: "profile",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: SITE_NAME,
+    locale: "en_US",
+    firstName: AUTHOR.givenName,
+    lastName: AUTHOR.familyName,
+    username: "imransetiadi",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Imran Setiadi | Cloud Engineer",
-    description: "Cloud Engineer focused on resilient infrastructure, Linux systems, Kubernetes, OpenShift, and OpenStack.",
-    images: ["/og-image.svg"],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
+  ...(googleSiteVerification ? { verification: { google: googleSiteVerification } } : {}),
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fffdf8" },
+    { media: "(prefers-color-scheme: dark)", color: "#1c1917" },
+  ],
 };
 
 export default function RootLayout({
@@ -71,34 +79,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Imran Setiadi",
-    jobTitle: "Cloud Engineer",
-    url: "https://imransetiadi.github.io/",
-    image: "https://imransetiadi.github.io/profile.jpg",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Jakarta",
-      addressCountry: "Indonesia",
-    },
-    sameAs: [
-      "https://github.com/imransetiadi",
-      "https://www.linkedin.com/in/imransetiadi/",
-      "https://www.threads.net/@imran_setiadi",
-      "https://www.instagram.com/imran_setiadi/",
-      "https://www.credly.com/users/imran-setiadi",
-    ],
-    knowsAbout: ["OpenStack", "OpenShift", "Kubernetes", "Linux", "DevOps", "Observability", "Automation"],
-  };
+  const jsonLd = buildStructuredData();
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeStructuredData(jsonLd) }} />
         <script
           dangerouslySetInnerHTML={{
             __html: `
